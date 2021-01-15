@@ -4,13 +4,15 @@ Nuestrositio tendrá como objetivo ofrecer en venta mapas antiguos. Estará prim
 
 ## Referentes del mercado:
 - de productos:
+
     1. [Geographicus](https://www.geographicus.com/)
         División en categorías muy claras.
-        
+
     2. [Vintage Maps](https://www.vintage-maps.com/) 
         Simplicidad estética.
 
 - de diseño:
+
     3. [Galería M](https://galeriam.com/)
         Detalle del producto/landing page.
 
