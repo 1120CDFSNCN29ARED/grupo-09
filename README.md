@@ -1,6 +1,6 @@
 # Mapas Antiguos Grupo-09
 
-Nuestrositio tendrá como objetivo ofrecer en venta mapas antiguos. Estará primariamente dirigido a coleccionistas, y secundariamente se apuntará a presentar los mapas a otras personas como obras de arte y de contenido histórico para despertar su interés en los gitmismos.
+Nuestro sitio tendrá como objetivo ofrecer en venta mapas antiguos. Estará primariamente dirigido a coleccionistas, y secundariamente se apuntará a presentar los mapas a otras personas como obras de arte y de contenido histórico para despertar su interés en los gitmismos.
 
 ## Referentes del mercado:
 - de productos:
