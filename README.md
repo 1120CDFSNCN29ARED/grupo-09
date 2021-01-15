@@ -1,7 +1,6 @@
 # Mapas Antiguos Grupo-09
 
-Sitio de venta especializado en mapas históricos y cartografía antigua.
-Apunta a un público compuesto por coleccionistas, historiadores y la comunidad académica.
+Nuestrositio tendrá como objetivo ofrecer en venta mapas antiguos. Estará primariamente dirigido a coleccionistas, y secundariamente se apuntará a presentar los mapas a otras personas como obras de arte y de contenido histórico para despertar su interés en los gitmismos.
 
 ## Referentes del mercado:
 - de productos:
