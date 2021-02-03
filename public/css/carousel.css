@@ -8,6 +8,7 @@ html, body {
 .carousel {
   width: 100vw;
   height: 200px;
+  flex: 1 0 auto;
 }
 
 @keyframes display {
@@ -34,6 +35,7 @@ html, body {
 }
 
 .carousel {
+  display: block;
   position: relative;
   width: 100vw;
   height: 300px;
@@ -51,7 +53,7 @@ html, body {
 }
 .carousel-slide > img {
     z-index: 0;
-    border: 1px solid rgb(204, 144, 106);
+    border: 5px solid rgb(204, 144, 106);
 }
 
 .carousel-slide:nth-child(2) {

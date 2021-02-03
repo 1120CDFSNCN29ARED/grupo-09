@@ -3,9 +3,14 @@
     padding: 0;
     margin: 0;
 }
+html, body {
+    height: 100%;
+}
 body {
     font-family: 'Lato', sans-serif;
     background-color: rgb(204, 144, 106);
+    display: flex;
+    flex-direction: column;
 }
 a {
     text-decoration: none;
@@ -122,37 +127,51 @@ header {
     background-color: white;
     padding-top: 5px;
 }
-
-.contact-container {
-    display: flex;
-    flex-direction: row;
-    background-color: rgba(36, 43, 46);
-    text-align: right;
-    margin-right: 0;
-    justify-content: flex-end;
+footer {
+    display: block;
     position: fixed;
     bottom: 10%;
     right: 0;
-    border-radius: 5px 0px 0px 5px;
+    background-color: rgba(36, 43, 46);
+    border-radius: 6px 0px 0px 6px;
+    flex-shrink: 0;
+}
+.contact-container {
+    display: flex;
+    flex-direction: row-reverse;
+    text-align: center;
+    margin-right: 0;
+    justify-content: space-evenly;
+    align-items: stretch;
 }
 
 .contact-icons {
+    display: none;
+    flex-direction: column;
     font-size: 30px;
     color: #c4ced1;
-    flex-direction: column;
-    width: 50%;
-    padding: 8%;
+    padding: 15px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-basis: auto;
+    text-align: center;
+    flex-shrink: 0;
+
 }
-.fab {
-    background-color: red;
+.contact-icons > i {
     border-radius: 4px;
 }
 .contact-text {
     font-size: 20px;
     writing-mode: vertical-lr;
-    color: white;
-    padding: 8%;
-    width: 50%;
-    font-weight: bold;
     text-align: center;
+    color: white;
+    flex-shrink: 0;
+    align-self: center;
+    margin: 10px 20px 10px 10px;
+    height:max-content;
+}
+
+.contact-container:hover .contact-icons {
+    display: flex;
 }
