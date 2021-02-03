@@ -1,0 +1,85 @@
+Result Skip Results Iframe
+EDIT ON
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.carousel {
+  width: 100vw;
+  height: 200px;
+}
+
+@keyframes display {
+  0% {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  10% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  20% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  30% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+}
+
+.carousel {
+  position: relative;
+  width: 100vw;
+  height: 300px;
+  margin-top: 0;
+  margin-left: -200px;
+
+}
+
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 100px);
+  opacity: 0;
+  animation: display 15s infinite;
+}
+.carousel-slide > img {
+    z-index: 0;
+    border: 1px solid rgb(204, 144, 106);
+}
+
+.carousel-slide:nth-child(2) {
+  animation-delay: 3s;
+}
+.carousel-slide:nth-child(3) {
+  animation-delay: 6s;
+}
+.carousel-slide:nth-child(4) {
+  animation-delay: 9s;
+}
+.carousel-slide:nth-child(5) {
+  animation-delay: 12s;
+}
+.carousel-slide > a {
+    
+}
+.slide-text {
+    position: relative;
+    margin-top: -30%;
+    z-index: 1;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 2%;
+    border:1px solid rgb(204, 144, 106);
+    border-left: none;
+    color: white;
+    background-color: rgba(36, 43, 46, 0.6);
+    width: 90%;
+    text-align: right;
+}
