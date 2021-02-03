@@ -3,6 +3,10 @@
     padding: 0;
     margin: 0;
 }
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: rgb(204, 144, 106);
+}
 a {
     text-decoration: none;
     color: white;
@@ -20,6 +24,7 @@ header {
     flex-wrap: wrap;
     max-height: 350px;
     background-color: #242b2e;
+    min-width: 480px;
 
 }
 .burger-box {
@@ -116,4 +121,38 @@ header {
     border-top: 1px solid white;
     background-color: white;
     padding-top: 5px;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(36, 43, 46);
+    text-align: right;
+    margin-right: 0;
+    justify-content: flex-end;
+    position: fixed;
+    bottom: 10%;
+    right: 0;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.contact-icons {
+    font-size: 30px;
+    color: #c4ced1;
+    flex-direction: column;
+    width: 50%;
+    padding: 8%;
+}
+.fab {
+    background-color: red;
+    border-radius: 4px;
+}
+.contact-text {
+    font-size: 20px;
+    writing-mode: vertical-lr;
+    color: white;
+    padding: 8%;
+    width: 50%;
+    font-weight: bold;
+    text-align: center;
 }
