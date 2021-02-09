@@ -11,93 +11,91 @@
 
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/css/login.css">
 
     <title>New World</title>
 </head>
 
 <body>
-    <header>
-        <div id="logo-header">
-            <a href="/"><img src="/img/logo_grey_cropped.png" alt="Logo" class="logo"></a>
-        </div>
-        <div id="nav-box">
-            <div class="burger-box">
-                <i class="fa fa-bars burger"></i>
+    <div class="content-wrapper">
+
+        <header>
+            <div id="logo-header">
+                <a href="/"><img src="/img/logo_grey_cropped.png" alt="Logo" class="logo"></a>
             </div>
-            <nav id="nav-mobile">
-                <p id="categories-title">Categorías:</p>
-                <ul id="categories-menu" class="nav-list">
-                    <li><a href="/product" class="categories-item"><i class="fas fa-times"></i>América</a></li>
-                    <li><a href="/product" class="categories-item"><i class="fas fa-times"></i>Europa</a></li>
-                    <li><a href="/product" class="categories-item"><i class="fas fa-times"></i>África</a></li>
-                    <li><a href="/product" class="categories-item"><i class="fas fa-times"></i>Asia</a></li>
-                    <li><a href="/product" class="categories-item"><i class="fas fa-times"></i>Oceanía</a></li>
-                    <li><a href="/product" class="categories-item"><i class="fas fa-times"></i>Polos</a></li>
-                </ul>
-                <ul id="account-menu" class="nav-list">
-                    <li><a href="/login" class="account-menu-item">Ingresar</a></li>
-                    <li><a href="/registration" class="account-menu-item">Crear Cuenta</a></li>
-                    <li><a href="/cart" class="account-menu-item">Carrito</a></li>
+            <div id="nav-box">
+                <div class="burger-box">
+                    <i class="fa fa-bars burger"></i>
+                </div>
+                <nav id="nav-mobile">
+                    <p id="categories-title">Categorías:</p>
+                    <ul id="categories-menu" class="nav-list">
+                        <li><a href="/product" class="categories-item"><i class="fas fa-times"></i>América</a></li>
+                        <li><a href="/product" class="categories-item"><i class="fas fa-times"></i>Europa</a></li>
+                        <li><a href="/product" class="categories-item"><i class="fas fa-times"></i>África</a></li>
+                        <li><a href="/product" class="categories-item"><i class="fas fa-times"></i>Asia</a></li>
+                        <li><a href="/product" class="categories-item"><i class="fas fa-times"></i>Oceanía</a></li>
+                        <li><a href="/product" class="categories-item"><i class="fas fa-times"></i>Polos</a></li>
+                    </ul>
+                    <ul id="account-menu" class="nav-list">
+                        <li><a href="/login" class="account-menu-item">Ingresar</a></li>
+                        <li><a href="/registration" class="account-menu-item">Crear Cuenta</a></li>
+                        <li><a href="/cart" class="account-menu-item">Carrito</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <nav id="nav-wide" class="account-menu">
+                <ul class="account-menu-list">
+                    <li class="account-menu-container">
+                        <div class="account-menu-text"><a href="/login">Ingresar</a></div>
+                        <div class="account-menu-icon"><a href="login"><i class="fas fa-sign-in-alt"></i></a></div>
+                    </li>
+                    <li class="account-menu-container">
+                        <div class="account-menu-text"><a href="/registration">Crear Cuenta</a></div>
+                        <div class="account-menu-icon"><a href="registration"><i class="fas fa-user-plus"></i></a></div>
+                    </li>
+                    <li class="account-menu-container">
+                        <div class="account-menu-text"><a href="/cart">Carrito</a></div>
+                        <div class="account-menu-icon"><a href="/cart"><i class="fas fa-shopping-cart"></i></a></div>
+                    </li>
                 </ul>
             </nav>
+        </header>
+    <main id="login-main">
+        <div id="login-form-box">
+            <form action="/login" method="POST" class="login-form">
+                <div class="login-box">
+                    <label class="login-input login-box-label" for="user">E-Mail:</label>
+                    <input type="email" name="user" id="user" class="login-input" required>
+                </div>
+                <div class="login-box">
+                    <label for="password" class="login-input login-box-label">Contraseña:</label>
+                    <input type="password" name="password" id="password" class="login-input" required>
+                </div>
+                <div class="login-box">
+                    <form class="login-box" method="GET" action="/">
+                        <button type="submit" class="login-button"><a href="/" id="login-link">Ingresar</a></button>
+                    </form>
+                </div>
+            </form>
         </div>
-        <nav id="nav-wide" class="account-menu">
-            <ul class="account-menu-list">
-                <li class="account-menu-container">
-                    <div class="account-menu-text"><a href="/login">Ingresar</a></div>
-                    <div class="account-menu-icon"><a href="login"><i class="fas fa-sign-in-alt"></i></a></div>
-                </li>
-                <li class="account-menu-container">
-                    <div class="account-menu-text"><a href="/registration">Crear Cuenta</a></div>
-                    <div class="account-menu-icon"><a href="registration"><i class="fas fa-user-plus"></i></a></div>
-                </li>
-                <li class="account-menu-container">
-                    <div class="account-menu-text"><a href="/cart">Carrito</a></div>
-                    <div class="account-menu-icon"><a href="/cart"><i class="fas fa-shopping-cart"></i></a></div>
-                </li>
-            </ul>
-        </nav>
-    </header>
-<main>
-    <div class="form-login"
-    <form action="/" method="get" >
-        <div id="input-box">
-            <div class="user-name">
-            <label for="user"></label>
-            <input type="text" name="user" id="user" placeholder="Nombre de usuario" required> 
-        </div>
-        <div id="password">
-            <label for="password"></label>
-            <input type="password" name="password" id="password" placeholder="Contrasenia">
-        </div>
-    </div>
-        <div> 
-        <button type="submit" id="button">  Login </button>
-        </div>
-        </form>
-    </div>
     </main>
-
-
-
-
-
-    <footer>
-        <div>
-            <i class="fas fa-globe" class="icon"></i>
+    <footer id="footer">
+        <div id="contact-text">
+            <p>Contactanos</p>
+        </div>
+        <div id="contact-icons">
+            <a href="https://www.twitter.com/" target="_blank" class="contact-link">
+                <i class="fab fa-twitter-square contact-icon"></i>
+            </a>
+            <a href="https://www.facebook.com/" target="_blank" class="contact-link">
+                <i class="fab fa-facebook-square contact-icon"></i>
+            </a>
+            <a href="mailto:#" target="_blank" class="contact-link">
+                <i class="fas fa-envelope-square contact-icon"></i>
+            </a>
         </div>
         <div>
-            <i class="fas fa-user-friends" class="icon"></i>
-            <p>Conocenos</p>
-        </div>
-        <div >
-            <i class="fas fa-info-circle" class="icon"></i>
-            <p>Informate acerca de las novedades</p>
-        </div>
-        <div>
-            <i class="fas fa-truck" class="icon"></i>
-            <p>Envios en 24 horas</p>
+            <p id="copyright-text">Copyright © 2021 Grupo-09</p>
         </div>
     </footer>
     

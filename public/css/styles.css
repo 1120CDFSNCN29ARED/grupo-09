@@ -126,11 +126,13 @@ header {
     margin: 10px 0px 15px 0px;
     text-align: center;
 }
-#registration-main {
+#registration-main,
+#login-main {
     margin: 0 auto;
     text-align: -moz-center;
 }
-#registration-form-box {
+#registration-form-box,
+#login-form-box {
     display: flex;
     flex-flow: column wrap;
     text-align: center;
@@ -139,24 +141,29 @@ header {
     margin: 20px;
     width: 70vw;
 }
-.registration-box {
+.registration-box,
+.login-box {
     width: 100%;
     margin: 10px auto;
 }
-.registration-box-label {
+.registration-box-label,
+.login-box-label {
     display: block;
     padding-bottom: 5px;
 }
-#create-account-button {
+#create-account-button,
+.login-button {
     border: none;
     border-radius: 5px;
     background-color: var(--nw-orange);
     padding: 5px 10px;
 }
-#create-account-button:active {
+#create-account-button:active,
+.login-button:active {
     background-color: var(--nw-beige);
 }
-#create-account-link {
+#create-account-link,
+#login-link {
     text-decoration: none;
     font-size: 16px;
     color: var(--nw-white);
