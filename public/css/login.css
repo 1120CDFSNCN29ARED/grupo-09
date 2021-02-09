@@ -159,12 +159,16 @@ footer{
 }
 footer{
     text-align: center;
-    display: flex;
+    font-size: 30px;
 }
 .icon{
-    font-size: 50px;
     transition: 450ms;
 }
 .icon:hover{
     color: gray;
+}
+@media(min-width: 760px){
+    footer{
+        display: flex;
+    }
 }
