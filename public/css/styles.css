@@ -130,12 +130,14 @@ header {
     text-align: center;
 }
 #registration-main,
-#login-main {
+#login-main,
+#cart-main {
     margin: 0 auto;
     text-align: -moz-center;
 }
 #registration-form-box,
-#login-form-box {
+#login-form-box,
+#cart-main {
     display: flex;
     flex-flow: column wrap;
     text-align: center;
@@ -144,35 +146,72 @@ header {
     margin: 20px;
     width: 70vw;
 }
+#cart-main {
+    flex-flow: column wrap;
+    margin-left: auto;
+    margin-right: auto;
+}
 .registration-box,
-.login-box {
+.login-box,
+.cart-item,
+#cart-confirm-purchase {
     width: 100%;
     margin: 10px auto;
 }
+#cart-confirm-purchase {
+    border-top: 1px solid var(--nw-blue);
+}
 .registration-box-label,
 .login-box-label {
-    display: block;
-    padding-bottom: 5px;
+display: block;
+padding-bottom: 5px;
+}
+.purchase-element {
+    margin: 10px;
 }
 #create-account-button,
-.login-button {
+.login-button,
+#confirm-purchase-button {
     border: none;
     border-radius: 5px;
     background-color: var(--nw-orange);
     padding: 5px 10px;
 }
 #create-account-button:active,
-.login-button:active {
+.login-button:active,
+#confirm-purchase-button:active {
     background-color: var(--nw-beige);
 }
 #create-account-link,
-#login-link {
+#login-link,
+#purchase-link {
     text-decoration: none;
     font-size: 16px;
     color: var(--nw-white);
 }
-
-
+.cart-item {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+}
+#cart-items {
+    display: flex;
+    flex-flow: wrap column;
+    padding: 20px 20px 0px 20px;
+}
+.individual-item,
+.purchase-total {
+    font-weight: bold;
+}
+.individual-item {
+    width: 50%;
+    text-align: left;
+}
+.fa-trash-alt {
+    font-size: 12px;
+    color: var(--nw-orange);
+    align-self: center;
+}
 @media (min-width: 480px) {
     /* empieza account-menu min-width <=tablet */
     .account-menu {
@@ -214,6 +253,12 @@ header {
         padding: 4px 0px 3px 0px;
         margin-right: 1px;
         transition: border-radius 450ms;
+    }
+    #footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
     }
 }
 
