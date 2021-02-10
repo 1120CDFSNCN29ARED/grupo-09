@@ -127,7 +127,8 @@ header {
     text-align: center;
 }
 #registration-main,
-#login-main {
+#login-main,
+#cart-main {
     margin: 0 auto;
     text-align: -moz-center;
 }
