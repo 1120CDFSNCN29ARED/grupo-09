@@ -91,7 +91,7 @@ header {
     padding: 5px 7px;
 }
 
-#footer {
+.footer {
     display: flex;
     flex-flow: wrap column;
     width: 100vw;
@@ -102,6 +102,9 @@ header {
     align-content: center;
     background-color: var(--nw-grey);
     color: var(--nw-white);
+}
+.footer-fixed {
+    position: fixed;
 }
 #contact-text {
     font-size: 15px;
@@ -127,8 +130,7 @@ header {
     text-align: center;
 }
 #registration-main,
-#login-main,
-#cart-main {
+#login-main {
     margin: 0 auto;
     text-align: -moz-center;
 }
@@ -137,4 +139,84 @@ header {
     display: flex;
     flex-flow: column wrap;
     text-align: center;
-} 
+    background-color: var(--nw-white);
+    border-radius: 5px;
+    margin: 20px;
+    width: 70vw;
+}
+.registration-box,
+.login-box {
+    width: 100%;
+    margin: 10px auto;
+}
+.registration-box-label,
+.login-box-label {
+    display: block;
+    padding-bottom: 5px;
+}
+#create-account-button,
+.login-button {
+    border: none;
+    border-radius: 5px;
+    background-color: var(--nw-orange);
+    padding: 5px 10px;
+}
+#create-account-button:active,
+.login-button:active {
+    background-color: var(--nw-beige);
+}
+#create-account-link,
+#login-link {
+    text-decoration: none;
+    font-size: 16px;
+    color: var(--nw-white);
+}
+
+
+@media (min-width: 480px) {
+    /* empieza account-menu min-width <=tablet */
+    .account-menu {
+        width: 35%;
+        text-align: right;
+        margin: auto;
+        font-size: 15px;
+    }
+    .account-menu-list {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding-right: 8%;
+    }
+    .account-menu-text {
+        display: none;
+    }
+    .account-menu-list li {
+        margin: 10px 0;
+        display: block;
+        width: 100%;
+    }
+    .account-menu-list i {
+        border: 1px solid #8b9092;
+        border-radius: 4px;
+        display: inline;
+    }
+    .account-menu-icon {
+        display: inline;
+        padding-left: 15px;
+    }
+    .account-menu-container:hover .account-menu-text {
+        display: inline;
+    }
+    /* esto después del hover*/
+    .account-menu-container {
+        border: 0px solid white;
+        border-radius: 4px;
+        padding: 4px 0px 3px 0px;
+        margin-right: 1px;
+        transition: border-radius 450ms;
+    }
+}
+
+@media (min-width: 769px) {
+
+}
