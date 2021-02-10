@@ -19,7 +19,8 @@
   },
   "homepage": "https://github.com/1120CDFSNCN29ARED/grupo-09#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "normalize.css": "^8.0.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.7"

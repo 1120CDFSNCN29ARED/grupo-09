@@ -1,15 +1,10 @@
 Result Skip Results Iframe
 EDIT ON
-html, body {
-  margin: 0;
-  padding: 0;
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
-
-.carousel {
-  width: 100vw;
-  height: 200px;
-}
-
 @keyframes display {
   0% {
     transform: translateX(200px);
@@ -33,13 +28,14 @@ html, body {
   }
 }
 
-.carousel {
+#carousel {
   position: relative;
+  display: block;
   width: 100vw;
-  height: 300px;
   margin-top: 0;
-  margin-left: -200px;
-
+  margin-left: -235px;
+  flex: 1 0 auto;
+  padding: 0 0 9rem 0;
 }
 
 .carousel-slide {
@@ -51,7 +47,7 @@ html, body {
 }
 .carousel-slide > img {
     z-index: 0;
-    border: 1px solid rgb(204, 144, 106);
+    border: 5px solid rgb(204, 144, 106);
 }
 
 .carousel-slide:nth-child(2) {
@@ -65,9 +61,6 @@ html, body {
 }
 .carousel-slide:nth-child(5) {
   animation-delay: 12s;
-}
-.carousel-slide > a {
-    
 }
 .slide-text {
     position: relative;
