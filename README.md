@@ -35,3 +35,15 @@ Nuestro sitio tendrá como objetivo ofrecer en venta mapas antiguos. Estará pri
 - Sol Aguilera  *DJ y futura programadora crack.*
 
 [Board @Trello](https://trello.com/b/pfLMTWfN/grupo-09)
+
+SPRINT 2.
+Retrospectiva:
+Dejar de: Esperar acercarnos a las fechas de las entregas para comenzar a trabajar más dinámicamente.
+
+Hacer -: No ser realistas al estimar el tiempo de trabajo.
+
+Continuar: Trabajando con Trello.
+
+Hacer +: Trabajar con Trello y ser más específicos con la asignación de tareas.
+
+Comenzar a: Trabajar con más tiempo. Trabajar conjuntamente en cuestiones específicas que nos presenten dificultad.
