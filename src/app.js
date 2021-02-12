@@ -13,9 +13,9 @@ const routesShoppingCart = require("./routes/shoppingCart");
 app.use("/", routesIndex);
 app.use("/login", routesLogin);
 app.use("/productDetail", routesProductDetail);
-app.use("/productos", routesProducts);
+app.use("/products", routesProducts);
 app.use("/registration", routesRegistration);
-app.use("/shoppingCart", routesShoppingCart);
+app.use("/cart", routesShoppingCart);
 
 app.listen(3002, () => {
     console.log('Server is live. Port 3002.');
