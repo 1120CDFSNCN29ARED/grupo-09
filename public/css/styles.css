@@ -115,7 +115,7 @@ header {
     display: flex;
     flex-direction: row;
     width: 50vw;
-    justify-content: space-around;
+    justify-content: space-evenly;
     text-align: center;
     font-size: 25px;
     padding: 15px;
@@ -137,7 +137,8 @@ header {
 }
 #registration-form-box,
 #login-form-box,
-#cart-main {
+#cart-main,
+.product-detail-main {
     display: flex;
     flex-flow: column wrap;
     text-align: center;
@@ -146,7 +147,8 @@ header {
     margin: 20px;
     width: 70vw;
 }
-#cart-main {
+#cart-main,
+.product-detail-main {
     flex-flow: column wrap;
     margin-left: auto;
     margin-right: auto;
@@ -154,9 +156,33 @@ header {
 .registration-box,
 .login-box,
 .cart-item,
-#cart-confirm-purchase {
+#cart-confirm-purchase,
+.product-detail-section {
     width: 100%;
     margin: 10px auto;
+}
+.product {
+    display: flex;
+    flex-flow: column wrap;
+    padding: 15px;
+    border-top: 1px solid var(--nw-blue);
+    border-bottom: 1px solid var(--nw-blue);
+}
+.product-title {
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+.product-price {
+    text-align: right;
+    color: var(--nw-orange);
+}
+.product-img {
+    width: 90%;
+    align-self: center;
+    padding-bottom: 15px;
+}
+.product-description {
+    text-align: justify;
 }
 #cart-confirm-purchase {
     border-top: 1px solid var(--nw-blue);
@@ -169,9 +195,19 @@ padding-bottom: 5px;
 .purchase-element {
     margin: 10px;
 }
+.product-purchase-box {
+    display: flex;
+    flex-flow: row wrap;
+    width: 50%;
+    margin: auto;
+    justify-content: space-evenly;
+    vertical-align: middle;
+    padding: 20px 15px 15px 15px;
+}
 #create-account-button,
 .login-button,
-#confirm-purchase-button {
+#confirm-purchase-button,
+.product-detail-button {
     border: none;
     border-radius: 5px;
     background-color: var(--nw-orange);
@@ -179,12 +215,14 @@ padding-bottom: 5px;
 }
 #create-account-button:active,
 .login-button:active,
-#confirm-purchase-button:active {
+#confirm-purchase-button:active,
+.product-detail-button:active {
     background-color: var(--nw-beige);
 }
 #create-account-link,
 #login-link,
-#purchase-link {
+#purchase-link,
+.product-detail-link {
     text-decoration: none;
     font-size: 16px;
     color: var(--nw-white);
