@@ -9,6 +9,8 @@ const routesProductDetail = require("./routes/productDetail");
 const routesProducts = require("./routes/products");
 const routesRegistration = require("./routes/registration");
 const routesShoppingCart = require("./routes/shoppingCart");
+const routesCreateProduct = require("./routes/createProduct");
+const routesEditProduct = require("./routes/editProduct");
 
 app.use("/", routesIndex);
 app.use("/login", routesLogin);
@@ -16,13 +18,15 @@ app.use("/productDetail", routesProductDetail);
 app.use("/products", routesProducts);
 app.use("/registration", routesRegistration);
 app.use("/cart", routesShoppingCart);
+app.use("/createProduct", routesCreateProduct);
+app.use("/editProduct", routesEditProduct);
 
 app.listen(3002, () => {
     console.log('Server is live. Port 3002.');
 });
 
 app.set('view engine', 'ejs');
-app.set("views", "./src/views")
+app.set("views", "./src/views");
 
 const publicPath = path.resolve(__dirname, './public');
 

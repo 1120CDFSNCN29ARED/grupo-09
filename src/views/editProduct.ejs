@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head') %>
+</head>
+
+<body>
+    <header>
+
+        <%- include('./partials/header') %>
+
+    </header>
+
+    <main>
+
+        <h1>Modificar un mapa existente</h1>
+        <form action="/createProduct" method="post">
+            <label for="name">Nombre del mapa</label>
+            <span class="feedback"></span>
+            <input type="text" name="name" id="name">
+            <label for="description">Descripción</label>
+            <span class="feedback"></span>
+            <textarea name="description" id="description" cols="30" rows="10"></textarea>
+            <label for="image">Imagen</label>
+            <span class="feedback"></span>
+            <input type="file" name="image" id="image" accept="image/*,.pdf">
+            <label for="price">Precio</label>
+            <span class="feedback"></span>
+            <input type="number" name="price" id="price">
+            <button type="submit">Modificar mapa</button>
+            <button type="reset">Cancelar</button>
+        </form>
+    </main>
+
+    <footer class="footer footer-fixed">
+        <%- include('./partials/footer') %>
+    </footer>
+</body>
+
+</html>
