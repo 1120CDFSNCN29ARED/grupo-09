@@ -12,24 +12,28 @@
 
     </header>
 
-    <main>
-        <h1>Incorporar un nuevo mapa</h1>
-        <form action="/createProduct" method="post">
-            <label for="name">Nombre del mapa</label>
-            <span class="feedback"></span>
-            <input type="text" name="name" id="name" required>
-            <label for="description">Descripción</label>
-            <span class="feedback"></span>
-            <textarea name="description" id="description" cols="30" rows="10" required></textarea>
-            <label for="image">Imagen</label>
-            <span class="feedback"></span>
-            <input type="file" name="image" id="image" accept="image/*,.pdf" required>
-            <label for="price">Precio</label>
-            <span class="feedback"></span>
-            <input type="number" name="price" id="price" requiredgit>
-            <button type="submit">Incorporar mapa</button>
-            <button type="reset">Cancelar</button>
-        </form>
+    <main class="admin-product-main">
+        <div class="admin-box">
+            <h1 class="product-title">Incorporar un nuevo mapa</h1>
+            <form action="/createProduct" method="post" class="registration-form">
+                <label for="name" class="registration-box-label">Nombre del mapa</label>
+                <span class="feedback"></span>
+                <input type="text" name="name" id="name" required>
+                <label for="description" class="registration-box-label">Descripción</label>
+                <span class="feedback"></span>
+                <textarea name="description" id="description" cols="30" rows="10" required></textarea>
+                <label for="image" class="registration-box-label">Imagen</label>
+                <span class="feedback"></span>
+                <input type="file" name="image" id="image" accept="image/*,.pdf" required>
+                <label for="price" class="registration-box-label">Precio</label>
+                <span class="feedback"></span>
+                <input type="number" name="price" id="price" requiredgit>
+                <div class="registration-box">
+                    <button type="submit" class="admin-product-button"><a href="#" class="button-link">Incorporar mapa</a></button>
+                    <button type="reset" class="admin-product-button"><a href="#" class="button-link">Cancelar</a></button>
+                </div>
+            </form>
+        </div>
 
     </main>
 

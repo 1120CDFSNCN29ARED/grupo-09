@@ -138,7 +138,8 @@ header {
 #registration-form-box,
 #login-form-box,
 #cart-main,
-.product-detail-main {
+.product-detail-main,
+.admin-product-main {
     display: flex;
     flex-flow: column wrap;
     text-align: center;
@@ -148,7 +149,8 @@ header {
     width: 70vw;
 }
 #cart-main,
-.product-detail-main {
+.product-detail-main,
+.admin-product-main {
     flex-flow: column wrap;
     margin-left: auto;
     margin-right: auto;
@@ -207,7 +209,8 @@ padding-bottom: 5px;
 #create-account-button,
 .login-button,
 #confirm-purchase-button,
-.product-detail-button {
+.product-detail-button,
+.admin-product-button {
     border: none;
     border-radius: 5px;
     background-color: var(--nw-orange);
@@ -216,13 +219,15 @@ padding-bottom: 5px;
 #create-account-button:active,
 .login-button:active,
 #confirm-purchase-button:active,
-.product-detail-button:active {
+.product-detail-button:active,
+.admin-product-button:active {
     background-color: var(--nw-beige);
 }
 #create-account-link,
 #login-link,
 #purchase-link,
-.product-detail-link {
+.product-detail-link,
+.button-link {
     text-decoration: none;
     font-size: 16px;
     color: var(--nw-white);
