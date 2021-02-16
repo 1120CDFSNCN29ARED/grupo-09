@@ -8,47 +8,9 @@
     <div class="content-wrapper">
 
         <header>
-            <div id="logo-header">
-                <a href="/"><img src="/img/logo_grey_cropped.png" alt="Logo" class="logo"></a>
-            </div>
-            <div id="nav-box">
-                <div class="burger-box">
-                    <i class="fa fa-bars burger"></i>
-                </div>
-                <nav id="nav-mobile">
-                    <p id="categories-title">Categorías:</p>
-                    <ul id="categories-menu" class="nav-list">
-                        <li><a href="/products" class="categories-item"><i class="fas fa-times"></i>América</a></li>
-                        <li><a href="/products" class="categories-item"><i class="fas fa-times"></i>Europa</a></li>
-                        <li><a href="/products" class="categories-item"><i class="fas fa-times"></i>África</a></li>
-                        <li><a href="/products" class="categories-item"><i class="fas fa-times"></i>Asia</a></li>
-                        <li><a href="/products" class="categories-item"><i class="fas fa-times"></i>Oceanía</a></li>
-                        <li><a href="/products" class="categories-item"><i class="fas fa-times"></i>Polos</a></li>
-                    </ul>
-                    <ul id="account-menu" class="nav-list">
-                        <li><a href="/login" class="account-menu-item">Ingresar</a></li>
-                        <li><a href="/registration" class="account-menu-item">Crear Cuenta</a></li>
-                        <li><a href="/cart" class="account-menu-item">Carrito</a></li>
-                </ul>
-            </nav>
-        </div>
-        <nav id="nav-wide" class="account-menu">
-            <ul class="account-menu-list">
-                <li class="account-menu-container">
-                    <div class="account-menu-text"><a href="/login">Ingresar</a></div>
-                    <div class="account-menu-icon"><a href="login"><i class="fas fa-sign-in-alt"></i></a></div>
-                </li>
-                <li class="account-menu-container">
-                    <div class="account-menu-text"><a href="/registration">Crear Cuenta</a></div>
-                    <div class="account-menu-icon"><a href="registration"><i class="fas fa-user-plus"></i></a></div>
-                </li>
-                <li class="account-menu-container">
-                    <div class="account-menu-text"><a href="/cart">Carrito</a></div>
-                    <div class="account-menu-icon"><a href="/cart"><i class="fas fa-shopping-cart"></i></a></div>
-                </li>
-            </ul>
-        </nav>
-    </header>
+            <%- include('./partials/header') %>
+        </header>
+        
     <main id="registration-main">
         <div id="registration-form-box">
             <form action="/registration" method="POST" class="registration-form">
