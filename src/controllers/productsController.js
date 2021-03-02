@@ -1,7 +1,32 @@
-const controlador = {
-    index: (req, res) => {
-    res.render("products.ejs");
-},
-}
+const fs = require('fs');
+const path = require('path');
 
-module.exports = controlador;
+const productsFilePath = path.resolve(__dirname, '../../Products.json');
+const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
+const productsController = {
+    index: (req, res) => {
+        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        res.render('products', { products });
+    },
+    update: (req, res) => {
+        for (i = 0; i < products.length; i++) {
+            if (products[i].id == req.params.id) {
+                Object.keys(products[i]).forEach(function (key) {
+                    if (products[i][key] != products[i].id && products[i][key] != products[i].image) {
+                        products[i][key] = req.body[key];
+                    };
+                });
+                fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 4));
+            };
+        };
+        res.redirect('/');
+    },
+    delete: (req, res) => {
+        let remainingProducts = products.filter( product => product.id != req.params.id);
+        fs.writeFileSync(productsFilePath, JSON.stringify(remainingProducts, null, 4));
+        res.redirect('/');
+    },
+};
+
+module.exports = productsController;

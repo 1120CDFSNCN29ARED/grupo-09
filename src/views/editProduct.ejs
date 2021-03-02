@@ -14,24 +14,27 @@
 
     <main class="admin-product-main">
         <div class="admin-box">
-            <h1 class="product-title">Modificar un mapa existente</h1>
-            <form action="/createProduct" method="post" class="registration-form">
+            <h1 class="product-title">Modificar <%= product.name %></h1>
+            <form action="/editProduct/<%= product.id %>/?_method=PATCH" method="POST" enctype="multipart/form-data" registration-form">
                 <label for="name" class="registration-box-label">Nombre del mapa</label>
                 <span class="feedback"></span>
-                <input type="text" name="name" id="name">
+                <input type="text" name="name" id="name" value="<%= product.name %>">
                 <label for="description" class="registration-box-label">Descripción</label>
                 <span class="feedback"></span>
-                <textarea name="description" id="description" cols="30" rows="10"></textarea>
+                <textarea name="description" id="description" cols="30" rows="10" value="<%= product.description %> "></textarea>
                 <label for="image" class="registration-box-label">Imagen</label>
                 <span class="feedback"></span>
-                <input type="file" name="image" id="image" accept="image/*,.pdf">
+                <input type="file" name="image" id="image" accept="image/*">
                 <label for="price" class="registration-box-label">Precio</label>
                 <span class="feedback"></span>
                 <input type="number" name="price" id="price">
                 <div class="registration-box">
-                    <button type="submit" class="admin-product-button"><a href="#" class="button-link">Modificar mapa</a></button>
-                    <button type="reset" class="admin-product-button"><a href="#" class="button-link">Cancelar</a></button>
-                </div>
+                    <button type="submit" class="admin-product-button"><a href="/products/edit/<%= product.id %>" class="button-link">Guardar Cambios</a></button>
+                    <button type="reset" class="admin-product-button"><a href="/" class="button-link">Cancelar</a></button>
+                    <form action="/products/<%= product.id %>?_method=DELETE" method="POST">
+                        <button type="submit" class="admin-product-button"><a href="#">Eliminar Mapa</a></button>
+                    </form>
+                    </div>
             </form>
         </div>
     </main>

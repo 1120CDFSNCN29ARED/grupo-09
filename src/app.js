@@ -1,7 +1,8 @@
 const express = require('express');
 const app = express();
-
 const path = require('path');
+const publicPath = path.resolve(__dirname, './public');
+const methodOverride = require('method-override');
 
 const routesIndex = require("./routes/index");
 const routesLogin = require("./routes/login");
@@ -26,14 +27,11 @@ app.listen(3002, () => {
 });
 
 app.set('view engine', 'ejs');
-app.set("views", "./src/views");
-
-const publicPath = path.resolve(__dirname, './public');
+app.set("views", path.resolve(__dirname, "./src/views"));
 
 app.use(express.static(publicPath));
-
 app.use(express.static('public'));
-
+app.use(methodOverride('_method'));
 
 
 
