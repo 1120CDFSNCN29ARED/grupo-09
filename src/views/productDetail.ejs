@@ -13,16 +13,16 @@
         <section class="product-detail-section">
             <article>
                 <h4>
-                    <%= product[i].name %>
+                    <%= product.name %>
                 </h4>
                 <div class="product">
-                    <img src="/img/maps/<%= product[i].image %> " alt="Mapa de <%= product[i].continent %> "
+                    <img src="/img/maps/<%= product.image %> " alt="Mapa de <%= product.continent %> "
                         class="maps" />
                     <p class="des">
-                        <%= product[i].description %>
+                        <%= product.description %>
                     </p>
                     <div class="price-icon">
-                        <p class="precio">$<%= product[i].price %>
+                        <p class="precio">$<%= product.price %>
                         </p>
                         <i class="fas fa-truck truck-icon"></i>
                     </div>
