@@ -1,82 +1,42 @@
 [
   {
     "id": 1,
-    "name": "volutpat quam pede lobortis ligula sit amet eleifend pede libero quis orci nullam molestie nibh in lectus",
-    "description": "nullam varius nulla facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque",
-    "image": "product_1.jpg",
-    "continent": "Ukraine",
-    "price": 1476.97
+    "name": "Africa y el mar etíope. Ortelius. (1584)",
+    "description": "Los términos África subsahariana y anteriormente África negra hacen referencia a aquellos países del continente africano que no limitan con el mar Mediterráneo. También se conoce como determinada zona geográfica ubicada al sur del desierto del Sahara. Sin embargo, no se hace referencia a las divisiones políticas; el término refiere a aquellas partes del continente africano habitadas mayoritariamente por personas de piel oscura, que comprenden aproximadamente el 85 por ciento de su superficie total. Otra clasificación señala el trópico de Cáncer como límite norte aproximado de África negra. Desde el punto de vista biogeográfico, se le denomina región Afrotropical.",
+    "image": "Africa.jpg",
+    "continent": "Africa",
+    "price": 5.000
   },
   {
     "id": 2,
-    "name": "tempus vivamus in felis eu sapien cursus vestibulum proin eu mi nulla",
-    "description": "est et tempus semper est quam pharetra magna ac consequat metus sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus at turpis donec posuere metus",
-    "image": "product_2.jpg",
-    "continent": "Philippines",
-    "price": 1089.87
+    "name": "Mapa Japonia según Janssonius (1636)",
+    "description": "Una de las primeras vistas de Japón y Corea. Este es un mapa muy atractivo, grabado audazmente. El mapa se basa en el mapa de Abraham Ortelius que a su vez se basó en los manuscritos del jesuita portugués Luis Teixeria, cartógrafo de la Corte del Rey de España. Aunque Hondius sigue la tergiversación de Ortelius de Corea (Corea) como una isla, agrega una notación de texto dentro de Corea en la que sugiere que podría no ser una isla. En la parte superior derecha hay un cartucho de título con brazalete. Un barco europeo navega en las aguas del norte de Japón y un junco chino navega por debajo de Japón en el 'Océano de China'. Un monstruo marino está debajo de Corea. Jodocus Hondius (1563-1612) fue el fundador de la famosa familia editora de mapas holandesa del siglo XVII. Hondius, junto con sus hijos Jodocus II y Henricus y su yerno Jan Janssonius, fue prominente en la cartografía holandesa y compitió con el emergente negocio de mapas de la familia Blaeu.",
+    "image": "japonia.jpg",
+    "continent": "Asia",
+    "price": 6.000
   },
   {
     "id": 3,
-    "name": "vitae ipsum aliquam non mauris morbi non lectus aliquam sit amet",
-    "description": "diam neque vestibulum eget vulputate ut ultrices vel augue vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae donec pharetra",
-    "image": "product_3.jpg",
-    "continent": "Mauritius",
-    "price": 2353.16
+    "name": "Mapa de Ptolomeo (siglo XVI) El mundo conocido en el siglo II A.C.",
+    "description": "Hay obras que fueron creadas en la época en la que el Mediterráneo era uno de los centros de la Humanidad, cuando las grandes civilizaciones clásicas dominaban el viejo mundo. La Geografía de Ptolomeo es una de ellas. Su importancia y valor están fuera de dudas, pero su trascendencia fue tal que incluso muchos siglos después Cristóbal Colón se equivocó en sus cálculos al basarse en ella.",
+    "image": "ptolomeo-4.jpg",
+    "continent": "Europa",
+    "price": 7.000
   },
   {
     "id": 4,
-    "name": "vitae ipsum aliquam non mauris morbi non",
-    "description": "duis faucibus accumsan odio curabitur convallis duis consequat dui nec nisi volutpat eleifend donec ut dolor morbi vel lectus",
-    "image": "product_4.jpg",
-    "continent": "China",
-    "price": 802.0
+    "name": "Tierra del Fuego. Hondius. (1607)",
+    "description": "La porción del cabo que se encuentra en la República de Chile esta en la Región de Magallanes y de la Antártida Chilena y del lado de la República Argentina se ubica en la Provincia de Tierra del Fuego, Antártida e Islas del Atlántico Sur, dentro de la jurisdicción del Departamento de Río Grande. De acuerdo con la Constitución de la Provincia de Tierra del Fuego, Antártida e Islas del Atlántico Sur de 1991, el artículo 2º determina que la provincia tiene los límites territoriales y los espacios marítimos y aéreos que por derecho le corresponden de conformidad con los límites internacionales de la República Argentina, ajustándose a los límites establecidos por el Tratado de 1881 y el Protocolo de 1893.",
+    "image": "Tierra_del_fuego.jpg",
+    "continent": "America",
+    "price": 8.000
   },
   {
     "id": 5,
-    "name": "nunc proin at turpis a pede posuere nonummy integer non velit donec diam neque vestibulum",
-    "description": "cubilia curae donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi non",
-    "image": "product_5.jpg",
-    "continent": "Indonesia",
-    "price": 1048.48
-  },
-  {
-    "id": 6,
-    "name": "vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam turpis adipiscing",
-    "description": "rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam pede lobortis ligula sit amet eleifend pede libero quis orci nullam molestie nibh in",
-    "image": "product_6.jpg",
-    "continent": "Thailand",
-    "price": 2529.82
-  },
-  {
-    "id": 7,
-    "name": "odio porttitor id consequat in consequat ut nulla",
-    "description": "morbi non quam nec dui luctus rutrum nulla tellus in sagittis dui vel nisl duis ac nibh fusce lacus purus aliquet at feugiat non pretium quis lectus suspendisse potenti in eleifend quam a odio in hac habitasse platea dictumst maecenas ut massa quis",
-    "image": "product_7.jpg",
-    "continent": "Sweden",
-    "price": 4350.07
-  },
-  {
-    "id": 8,
-    "name": "vivamus in felis eu sapien cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec",
-    "description": "rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci mauris lacinia sapien quis libero nullam sit amet turpis elementum ligula vehicula consequat morbi a ipsum integer a nibh in quis justo maecenas",
-    "image": "product_8.jpg",
-    "continent": "China",
-    "price": 629.72
-  },
-  {
-    "id": 9,
-    "name": "bibendum felis sed interdum venenatis turpis enim blandit mi",
-    "description": "morbi quis tortor id nulla ultrices aliquet maecenas leo odio condimentum id luctus nec molestie sed justo pellentesque viverra pede ac diam cras pellentesque volutpat dui maecenas tristique est et tempus semper",
-    "image": "product_9.jpg",
-    "continent": "China",
-    "price": 2070.9
-  },
-  {
-    "id": 10,
-    "name": "ut odio cras mi pede malesuada in imperdiet et commodo vulputate justo in blandit ultrices enim lorem ipsum dolor",
-    "description": "cras in purus eu magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus",
-    "image": "product_10.jpg",
-    "continent": "Portugal",
-    "price": 818.99
+    "name": "Mapa de Waldseemüler (1507) El mundo conocido en el siglo II A.C.",
+    "description": "Universalis Cosmographia o Planisferio de Waldseemüller es un planisferio publicado bajo la dirección del cartógrafo Martin Waldseemüller en Saint-Dié e impreso en Estrasburgo en 1507, en el que por primera vez se utiliza el nombre de «América» al considerar a Américo Vespucio descubridor del nuevo continente. Titulado Universalis Cosmographia Secundum Ptholomei Traditionem et Americi Vespuci Aliorumque Lustrationes, el planisferio acompañaba a un pequeño tratado de geografía titulado Cosmographiae Introductio.",
+    "image": "Waldseemuller_map_2.jpg",
+    "continent": "Oceania",
+    "price": 9.000
   }
 ]

@@ -15,7 +15,7 @@
     <main class="admin-product-main">
         <div class="admin-box">
             <h1 class="product-title">Modificar <%= product.name %></h1>
-            <form action="/editProduct/<%= product.id %>/?_method=PATCH" method="POST" enctype="multipart/form-data" registration-form">
+            <form action="/editProduct/<%= product.id %>/?_method=PATCH" method="POST" enctype="multipart/form-data" class="registration-form">
                 <label for="name" class="registration-box-label">Nombre del mapa</label>
                 <span class="feedback"></span>
                 <input type="text" name="name" id="name" value="<%= product.name %>">

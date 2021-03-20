@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <%- include('./partials/head') %>
 </head>
@@ -8,28 +9,37 @@
     <header>
         <%- include('./partials/header') %>
     </header>
-<main class="product-detail-main">
-    <section class="product-detail-section">
-        <article>
-            <h4 class="product-title">Mapa Japonia según Janssonius (1636)</h4>
-            <div class="product">
-                <img src="/img/japonia.jpg" alt="Mapa-Japonia" class="maps product-img">
-                <p class="des product-description">Una de las primeras vistas de Japón y Corea. Este es un mapa muy atractivo, grabado audazmente.
-                    El mapa se basa en el mapa de Abraham Ortelius que a su vez se basó en los manuscritos del jesuita portugués Luis Teixeria, cartógrafo de la Corte del Rey de España.
-                    Aunque Hondius sigue la tergiversación de Ortelius de Corea (Corea) como una isla, agrega una notación de texto dentro de Corea en la que sugiere que podría no ser una isla.
-                    En la parte superior derecha hay un cartucho de título con brazalete. Un barco europeo navega en las aguas del norte de Japón y un junco chino navega por debajo de Japón en el "Océano de China". Un monstruo marino está debajo de Corea. Jodocus Hondius (1563-1612) fue el fundador de la famosa familia editora de mapas holandesa del siglo XVII. Hondius, junto con sus hijos Jodocus II y Henricus y su yerno Jan Janssonius, fue prominente en la cartografía holandesa y compitió con el emergente negocio de mapas de la familia Blaeu.</p>
-                    <p class="precio product-price">$6.000</p>
-            </div>
-            <div class="price-icon product-purchase-box">
-                <button type="submit" class="product-detail-button"><a href="/cart" class="product-detail-link">Comprar</a></button>
-                <button type="submit" class="product-detail-button"><a href="/products"class="product-detail-link">+ Carrito</a></button>
-            </div>    
-        </article>
-    </section>
-</main>
-<footer class="footer">
-    <%- include('./partials/footer') %>
-</footer>
-    
+    <main class="product-detail-main">
+        <section class="product-detail-section">
+            <article>
+                <h4>
+                    <%= product[i].name %>
+                </h4>
+                <div class="product">
+                    <img src="/img/maps/<%= product[i].image %> " alt="Mapa de <%= product[i].continent %> "
+                        class="maps" />
+                    <p class="des">
+                        <%= product[i].description %>
+                    </p>
+                    <div class="price-icon">
+                        <p class="precio">$<%= product[i].price %>
+                        </p>
+                        <i class="fas fa-truck truck-icon"></i>
+                    </div>
+                </div>
+                <div class="price-icon product-purchase-box">
+                    <button type="submit" class="product-detail-button"><a href="/cart"
+                            class="product-detail-link">Comprar</a></button>
+                    <button type="submit" class="product-detail-button"><a href="/products"
+                            class="product-detail-link">+ Carrito</a></button>
+                </div>
+            </article>
+        </section>
+    </main>
+    <footer class="footer">
+        <%- include('./partials/footer') %>
+    </footer>
+
 </body>
+
 </html>
