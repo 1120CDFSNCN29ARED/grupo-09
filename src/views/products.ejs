@@ -3,7 +3,6 @@
 
 <head>
   <%- include('./partials/head') %>
-    <link rel="stylesheet" href="/css/products.css" />
 </head>
 
 <body>
@@ -12,17 +11,17 @@
   </header>
   <main>
     <section>
-      <div class="conteiner">
+      <div class="product-article-container">
         <% for (i=0; i<products.length; i++){%>
     
-        <article>
-          <h4><%= products[i].name %> </h4>
+        <article class="product-article">
+          <h4 class="product-detail-text product-detail-title"><%= products[i].name %> </h4>
           <div class="product">
-            <img src="/img/maps/<%= products[i].image %> " alt="Mapa de <%= products[i].continent %> " class="maps" />
-            <p class="des">
+            <img src="/img/maps/<%= products[i].image %> " alt="Mapa de <%= products[i].continent %> " class="product-img" />
+            <p class="product-detail-text">
               <%= products[i].description %> 
             </p>
-            <div class="price-icon">
+            <div class="product-detail-text price-icon">
               <p class="precio">$<%= products[i].price %></p>
               <i class="fas fa-truck truck-icon"></i>
             </div>

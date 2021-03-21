@@ -25,7 +25,7 @@ router.get('/:id', productsController.showProduct);
 
 // Crear productos
 router.get('/create', productsController.createForm);
-router.post("/", uploadFile.single("image"), productsController.createNewProduct);
+router.post("/create", uploadFile.single("image"), productsController.createNewProduct);
 
 
 // Editar un producto

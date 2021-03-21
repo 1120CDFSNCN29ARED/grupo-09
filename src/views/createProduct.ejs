@@ -6,15 +6,11 @@
 </head>
 
 <body>
-    <header>
-
-        <%- include('./partials/header') %>
-
-    </header>
+    <%- include('./partials/header') %>
     <main class="admin-product-main">
         <div class="admin-box">
             <h1 class="product-title">Incorporar un nuevo mapa</h1>
-            <form action="/createProduct" method="POST" class="registration-form" enctype="multipart/form-data">
+            <form action="/create" method="POST" class="registration-form" enctype="multipart/form-data">
                 <label for="name" class="registration-box-label">Nombre del mapa</label>
                 <span class="feedback"></span>
                 <input type="text" name="name" id="name" required>

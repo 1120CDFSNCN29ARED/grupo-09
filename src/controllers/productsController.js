@@ -1,4 +1,3 @@
-const e = require("express");
 const fs = require("fs");
 const path = require("path");
 
@@ -13,14 +12,13 @@ const productsController = {
 
   showProduct: (req, res) => {
     const id = req.params.id;
-    const product = {};
+    let product = {};
     for (i = 0; i < products.length; i++) {
-      if (products[i] == id) {
+      if (products[i].id == id) {
         product = products[i];
       }
     }
     res.render("productDetail", { product });
-    
   },
 
   createForm: (req, res) => {

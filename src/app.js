@@ -17,7 +17,7 @@ app.listen(3002, () => {
 });
 
 app.set('view engine', 'ejs');
-app.set("views", path.resolve(__dirname, "./views"));
+app.set("views", path.resolve(__dirname, "views"));
 
 app.use(express.static(publicPath));
 app.use(express.static('public'));

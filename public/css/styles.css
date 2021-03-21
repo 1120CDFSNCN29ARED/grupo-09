@@ -163,6 +163,25 @@ header {
     width: 100%;
     margin: 10px auto;
 }
+.product-article-container {
+    display: flex;
+    flex-flow: column wrap;
+}
+.product-article {
+    width: 80vw;
+    align-self: center;
+    background-color: var(--nw-white);
+    padding: 2vh 0;
+}
+.product-detail-text {
+    padding-left: 3vw;
+    padding-right: 3vw;
+}
+.product-detail-title {
+    padding-bottom: 1vh;
+    font-weight: bolder;
+    font-size: larger;
+}
 .product {
     display: flex;
     flex-flow: column wrap;
