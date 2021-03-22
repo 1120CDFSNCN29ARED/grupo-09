@@ -23,8 +23,4 @@ app.use(express.static(publicPath));
 app.use(express.static('public'));
 app.use(methodOverride('_method'));
 
-
-
-
-
-
+module.exports = app;
