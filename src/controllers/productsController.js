@@ -27,7 +27,7 @@ const productsController = {
 
   createNewProduct: (req, res) => {
     let newProd = req.body;
-    newProd.id = products.length;
+    newProd.id = products.length + 1;
     products.push(newProd);
     fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 4));
     console.log('********* CREATION SUCCESSFUL **************');
