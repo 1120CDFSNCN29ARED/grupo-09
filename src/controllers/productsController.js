@@ -26,9 +26,11 @@ const productsController = {
   },
 
   createNewProduct: (req, res) => {
-    const newProd = req.body;
-    products = products.push(newProd);
+    let newProd = req.body;
+    newProd.id = products.length;
+    products.push(newProd);
     fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 4));
+    console.log('********* CREATION SUCCESSFUL **************');
     res.redirect("/");
   },
 
