@@ -31,11 +31,12 @@
                 <div class="registration-box">
                     <button type="submit" class="admin-product-button"><a href="/products/edit/<%= product.id %>" class="button-link">Guardar Cambios</a></button>
                     <button type="reset" class="admin-product-button"><a href="/" class="button-link">Cancelar</a></button>
-                    <form action="/products/<%= product.id %>?_method=DELETE" method="POST">
-                        <button type="submit" class="admin-product-button"><a href="#">Eliminar Mapa</a></button>
-                    </form>
+                    
                     </div>
             </form>
+<form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST">
+    <button type="submit" class="admin-product-button">Eliminar Mapa</a></button>
+</form>
         </div>
     </main>
 

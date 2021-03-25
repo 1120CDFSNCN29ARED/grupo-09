@@ -11,7 +11,7 @@ const storage = multer.diskStorage({
     },
 
     filename: function(req, file, cb){
-        cb(null, file.originalname + " " + Date.now() + path.extname(file.originalname))
+        cb(null, Date.now() + file.originalname)
     },
 });
 
@@ -26,14 +26,15 @@ router.get('/', productsController.index);
 router.get('/create', productsController.createForm);
 router.post("/create", uploadFile.single("image"), productsController.createNewProduct);
 
+
+// Eliminar un producto
+router.delete('/delete/:id', productsController.delete);
+
 // Editar un producto
 router.get('/edit/:id', productsController.edit);
 router.patch("/:id", uploadFile.single("image"), productsController.update);
 
 // Detalle de un producto
 router.get('/:id', productsController.showProduct);
-
-// Eliminar un producto
-router.delete('/:id', productsController.delete);
 
 module.exports = router;

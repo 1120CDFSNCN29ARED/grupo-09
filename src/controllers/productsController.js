@@ -27,8 +27,10 @@ const productsController = {
 
   createNewProduct: (req, res) => {
     let newProd = req.body;
+    newProd.image = req.file.filename;
     newProd.id = products.length + 1;
     products.push(newProd);
+    console.log(newProd);
     fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 4));
     console.log('********* CREATION SUCCESSFUL **************');
     res.redirect("/");
@@ -62,6 +64,7 @@ const productsController = {
     res.redirect("/");
   },
   delete: (req, res) => {
+    console.log(req.params.id, product)
     let remainingProducts = products.filter(
       (product) => product.id != req.params.id
     );

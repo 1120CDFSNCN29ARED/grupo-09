@@ -7,34 +7,44 @@
 
 <body>
     <%- include('./partials/header') %>
-    <main class="admin-product-main">
-        <div class="admin-box">
-            <h1 class="product-title">Incorporar un nuevo mapa</h1>
-            <form action="/products/create" method="POST" class="registration-form" enctype="multipart/form-data">
-                <label for="name" class="registration-box-label">Nombre del mapa</label>
-                <span class="feedback"></span>
-                <input type="text" name="name" id="name" required>
-                <label for="description" class="registration-box-label">Descripción</label>
-                <span class="feedback"></span>
-                <textarea name="description" id="description" cols="30" rows="10" required></textarea>
-                <label for="image" class="registration-box-label">Imagen</label>
-                <span class="feedback"></span>
-                <input type="file" name="image" id="image" accept="image/*,.pdf" required>
-                <label for="price" class="registration-box-label">Precio</label>
-                <span class="feedback"></span>
-                <input type="number" name="price" id="price" required>
-                <div class="registration-box">
-                    <button type="submit" class="admin-product-button"><a href="/" class="button-link">Incorporar mapa</a></button>
-                    <button type="reset" class="admin-product-button"><a href="/" class="button-link">Cancelar</a></button>
-                </div>
-            </form>
-        </div>
+        <main class="admin-product-main">
+            <div class="admin-box">
+                <h1 class="product-title">Incorporar un nuevo mapa</h1>
+                <form action="/products/create" method="POST" class="registration-form" enctype="multipart/form-data">
+                    <label for="name" class="registration-box-label">Nombre del mapa</label>
+                    <span class="feedback"></span>
+                    <input type="text" name="name" id="name" required>
+                    <label for="continent" class="registration-box-label">Continente</label>
+                    <span class="feedback"></span>
+                    <select name="continent">
+                        <option value="America">América</option>
+                        <option value="Africa">África</option>
+                        <option value="Europa">Europa</option>
+                        <option value="Asia">Asia</option>
+                        <option value="Oceanía">Oceanía</option>
+                        <option value="Polos">Polos</option>
+                    </select>
+                    <label for="description" class="registration-box-label">Descripción</label>
+                    <span class="feedback"></span>
+                    <textarea name="description" id="description" cols="30" rows="10" required></textarea>
+                    <label for="image" class="registration-box-label">Imagen</label>
+                    <span class="feedback"></span>
+                    <input type="file" name="image" id="image" accept="image/*,.pdf" required>
+                    <label for="price" class="registration-box-label">Precio</label>
+                    <span class="feedback"></span>
+                    <input type="number" name="price" id="price" required>
+                    <div class="registration-box">
+                        <button type="submit" class="admin-product-button">Incorporar mapa</a></button>
+                        <button type="reset" class="admin-product-button">Cancelar</a></button>
+                    </div>
+                </form>
+            </div>
 
-    </main>
+        </main>
 
-    <footer class="footer footer-fixed">
-        <%- include('./partials/footer') %>
-    </footer>
+        <footer class="footer footer-fixed">
+            <%- include('./partials/footer') %>
+        </footer>
 </body>
 
 </html>
