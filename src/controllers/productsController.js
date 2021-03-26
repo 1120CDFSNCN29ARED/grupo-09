@@ -36,15 +36,22 @@ const productsController = {
     res.redirect("/");
   },
 
+  deleteProduct: (req, res) => {
+    console.log('EL ID ES '+req.params.id);
+    let remainingProducts = products.filter(product => product.id != req.params.id);
+    fs.writeFileSync(productsFilePath, JSON.stringify(remainingProducts, null, 4));
+    console.log("********* DELETION SUCCESSFUL **************");
+    res.redirect('/');
+  },
   edit: (req, res) => {
     const id = req.params.id;
-    const product = {};
+    let product = {};
     for (i = 0; i < products.length; i++) {
-      if (products[i] == id) {
+      if (products[i].id == id) {
         product = products[i];
       }
     }
-    res.render("editProduct", { product });
+    res.render('editProduct', { product });
   },
 
   update: (req, res) => {
@@ -52,27 +59,14 @@ const productsController = {
       if (products[i].id == req.params.id) {
         Object.keys(products[i]).forEach(function (key) {
           if (
-            products[i][key] != products[i].id &&
-            products[i][key] != products[i].image
-          ) {
+            products[i][key] != products[i].id) {
             products[i][key] = req.body[key];
           }
         });
         fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 4));
       }
     }
-    res.redirect("/");
-  },
-  delete: (req, res) => {
-    console.log(req.params.id, product)
-    let remainingProducts = products.filter(
-      (product) => product.id != req.params.id
-    );
-    fs.writeFileSync(
-      productsFilePath,
-      JSON.stringify(remainingProducts, null, 4)
-    );
-    res.redirect("/");
+    res.redirect('/');
   },
 };
 
