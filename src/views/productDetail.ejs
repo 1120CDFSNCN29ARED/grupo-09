@@ -12,19 +12,19 @@
     <main class="product-detail-main">
         <section class="product-detail-section">
             <article>
-                <h4>
+                <h4 class="product-detail-title">
                     <%= product.name %>
                 </h4>
                 <div class="product">
                     <img src="/img/maps/<%= product.image %> " alt="Mapa de <%= product.continent %> "
-                        class="maps" />
-                    <p class="des">
+                        class="product-img" />
+                    <p class="product-description prod-desc-detail">
                         <%= product.description %>
                     </p>
                     <div class="price-icon">
-                        <p class="precio">$<%= product.price %>
+                        <p class="price-detail">
+                            Precio: <%= product.price.toLocaleString('es-AR', { style: 'currency' , currency: 'ARS' }); %>
                         </p>
-                        <i class="fas fa-truck truck-icon"></i>
                     </div>
                 </div>
                 <div class="price-icon product-purchase-box">

@@ -16,15 +16,18 @@
     
         <article class="product-article">
           <h4 class="product-detail-text product-detail-title"><%= products[i].name %> </h4>
-          <div class="product">
-            <img src="/img/maps/<%= products[i].image %> " alt="Mapa de <%= products[i].continent %> " class="product-img" />
-            <p class="product-detail-text">
-              <%= products[i].description %> 
-            </p>
-            <div class="product-detail-text price-icon">
-              <p class="precio">$<%= products[i].price %></p>
-              <i class="fas fa-truck truck-icon"></i>
+          <div class="product-in-products">
+            <div class="products-col1">
+              <img src="/img/maps/<%= products[i].image %> " alt="Mapa de <%= products[i].continent %> " class="products-img" />
+              <!--<p class="products-price">
+                <%= products[i].price.toLocaleString('es-AR', { style: 'currency', currency: 'ARS' }); %>
+              </p>-->
             </div>
+            <div class="products-col2">
+              <p id="products-description"><%= products[i].description %></p><h3>...</h3>
+            <button type="submit" id="view-details-button"><a href="/products/<%= products[i].id %>" id="view-details-link">Ver Detalle</a></button>
+          </div>
+            
           </div>
         </article>
 

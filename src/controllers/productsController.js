@@ -4,6 +4,12 @@ const path = require('path');
 const productsFilePath = path.resolve(__dirname, '../../Products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
+const formatter = new Intl.NumberFormat('es-AR', {
+  style: 'currency',
+  currency: 'ARS',
+  minimumFractionDigits: 2
+});
+//formatter.format(n);
 const productsController = {
   index: (req, res) => {
     const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -32,7 +38,6 @@ const productsController = {
     products.map(product => { product.id > greatestId ? greatestId = product.id : '' });
     newProd.id = greatestId + 1;
     products.push(newProd);
-    console.log(newProd);
     fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 4));
     console.log('********* CREATION SUCCESSFUL **************');
     res.redirect('/');
