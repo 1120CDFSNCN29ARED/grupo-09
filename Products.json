@@ -40,51 +40,25 @@
         "price": 9
     },
     {
-        "name": "pldfkgof",
-        "description": "mfkesvsd",
-        "price": "5000",
-        "id": 6
+        "name": "un mapa",
+        "continent": "Europa",
+        "description": "ti ti ti",
+        "price": "800000",
+        "image": "1616731245050logo_grey_cropped.png",
+        "id": [
+            null,
+            null,
+            null,
+            null,
+            null
+        ]
     },
     {
-        "name": "pldfkgof",
-        "description": "mfkesvsd",
-        "price": "5000",
-        "id": 7
-    },
-    {
-        "name": "sdfsd",
+        "name": "sefefefe",
         "continent": "Asia",
-        "description": "dvasdfds",
-        "price": "5000",
-        "id": 8
-    },
-    {
-        "name": "sdfvsfds",
-        "continent": "America",
-        "description": "cxvvfc",
-        "price": "100",
-        "id": 9
-    },
-    {
-        "name": "kkfd",
-        "continent": "America",
-        "description": "kokdod",
-        "price": "1000",
-        "id": 10
-    },
-    {
-        "name": "sdf",
-        "continent": "America",
-        "description": "fvfs",
-        "price": "400",
-        "id": 11
-    },
-    {
-        "name": "dfdf",
-        "continent": "America",
-        "description": "ksdk",
-        "price": "500",
-        "image": "1616695967538fitzroy-nevado.jpg",
-        "id": 12
+        "description": "ffffffffffffffffffffffffffffffffffffffffffff",
+        "price": "992288822",
+        "image": "1616731457595logo_grey_cropped.png",
+        "id": 6
     }
 ]

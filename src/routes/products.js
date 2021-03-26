@@ -9,7 +9,6 @@ const storage = multer.diskStorage({
     destination: function(req, file, cb){
         cb(null, './public/img/maps');
     },
-
     filename: function(req, file, cb){
         cb(null, Date.now() + file.originalname);
     },
@@ -23,11 +22,11 @@ router.get('/', productsController.index);
 router.get('/create', productsController.createForm);
 router.post('/create', uploadFile.single('image'), productsController.createNewProduct);
 
-// Eliminar un producto
-router.delete('/:id', productsController.deleteProduct);
-
 //Formulario de edición de producto
 router.get('/edit/:id', productsController.edit);
+
+// Eliminar un producto
+router.post('/:id', productsController.deleteProduct);
 
 // Editar un producto
 router.patch('/:id', uploadFile.single('image'), productsController.update);

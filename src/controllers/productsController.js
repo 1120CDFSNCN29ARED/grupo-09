@@ -1,13 +1,13 @@
-const fs = require("fs");
-const path = require("path");
+const fs = require('fs');
+const path = require('path');
 
-const productsFilePath = path.resolve(__dirname, "../../Products.json");
-const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+const productsFilePath = path.resolve(__dirname, '../../Products.json');
+const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const productsController = {
   index: (req, res) => {
-    const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
-    res.render("products", { products });
+    const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+    res.render('products', { products });
   },
 
   showProduct: (req, res) => {
@@ -18,29 +18,31 @@ const productsController = {
         product = products[i];
       }
     }
-    res.render("productDetail", { product });
+    res.render('productDetail', { product });
   },
 
   createForm: (req, res) => {
-    res.render("createProduct");
+    res.render('createProduct');
   },
 
   createNewProduct: (req, res) => {
     let newProd = req.body;
     newProd.image = req.file.filename;
-    newProd.id = products.length + 1;
+    let greatestId = 0;
+    products.map(product => { product.id > greatestId ? greatestId = product.id : '' });
+    newProd.id = greatestId + 1;
     products.push(newProd);
     console.log(newProd);
     fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 4));
     console.log('********* CREATION SUCCESSFUL **************');
-    res.redirect("/");
+    res.redirect('/');
   },
 
   deleteProduct: (req, res) => {
     console.log('EL ID ES '+req.params.id);
     let remainingProducts = products.filter(product => product.id != req.params.id);
     fs.writeFileSync(productsFilePath, JSON.stringify(remainingProducts, null, 4));
-    console.log("********* DELETION SUCCESSFUL **************");
+    console.log('********* DELETION SUCCESSFUL **************');
     res.redirect('/');
   },
   edit: (req, res) => {
@@ -51,6 +53,7 @@ const productsController = {
         product = products[i];
       }
     }
+    console.log('********* EDITION SUCCESSFUL **************');
     res.render('editProduct', { product });
   },
 
