@@ -35,17 +35,66 @@
 
                     <div class="registration-box">
                         <label for="password" class="registration-box-label">Contraseña:</label>
-                        <input type="password" name="password" id="password" class="registration-box-input" required>
+                        <input onkeyup="active()" type="password" name="password" id="password" class="registration-box-input" required>
                     </div>
                     <div class="registration-box">
                         <label for="confirm-password" class="registration-box-label">Confirmar contraseña:</label>
-                        <input type="password" name="confirm-password" id="confirm-password"
+                        <input onkeyup="active_2()" type="password" name="confirm-password" id="confirm-password"
                             class="registration-box-input" required>
                     </div>
+                    <div class="error-text">
+                    </div>
                     <div class="registration-box">
-                        <button type="submit" id="create-account-button">Crear cuenta</button>
+                        <button type="submit" id="create-account-button" disabled>Crear cuenta</button>
                     </div>
                 </form>
+
+                <script>
+                    const pswrd_1 = document.querySelector("#password");
+                    const pswrd_2 = document.querySelector("#confirm-password");
+                    const errorText = document.querySelector(".error-text");
+                    const showBtn = document.querySelector(".show");
+                    const btn = document.querySelector("button");
+                    function active() {
+                        if (pswrd_1.value.length >= 6) {
+                            btn.removeAttribute("disabled", "");
+                            btn.classList.add("active");
+                            pswrd_2.removeAttribute("disabled", "");
+                        } else {
+                            btn.setAttribute("disabled", "");
+                            btn.classList.remove("active");
+                            pswrd_2.setAttribute("disabled", "");
+                        }
+                    }
+                    btn.onclick = function () {
+                        if (pswrd_1.value != pswrd_2.value) {
+                            errorText.style.display = "block";
+                            errorText.classList.remove("matched");
+                            errorText.textContent = "Las constraseñas no coinciden";
+                            return false;
+                        } 
+                    }
+                    function active_2() {
+                        if (pswrd_2.value != "") {
+                            showBtn.style.display = "block";
+                            showBtn.onclick = function () {
+                                if ((pswrd_1.type == "password") && (pswrd_2.type == "password")) {
+                                    pswrd_1.type = "text";
+                                    pswrd_2.type = "text";
+                                    this.textContent = "Hide";
+                                    this.classList.add("active");
+                                } else {
+                                    pswrd_1.type = "password";
+                                    pswrd_2.type = "password";
+                                    this.textContent = "Show";
+                                    this.classList.remove("active");
+                                }
+                            }
+                        } else {
+                            showBtn.style.display = "none";
+                        }
+                    }
+                </script>
             </div>
         </main>
         <footer class="footer">

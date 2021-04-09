@@ -4,6 +4,8 @@ const path = require("path");
 
 const usersFilePath = path.resolve(__dirname, "../../Users.json");
 const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
+const bcrypt = require("bcryptjs");
+
 
 const controlador = {
   index: (req, res) => {
@@ -20,9 +22,12 @@ const controlador = {
   },
 
   registration: (req, res) => {
-    console.log(req.body);
-    console.log(req.file);
-  let newUser = req.body;
+   let newUser = {
+     names: req.body.names,
+     email: req.body.email,
+     address: req.body.address,
+     password: bcrypt.hashSync(req.body.password, 10),
+   };
   newUser.image = req.file.filename;
   let greatestId = 0;
   users.map((user) => {
