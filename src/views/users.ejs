@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head') %>
+</head>
+
+<body>
+    <section>
+        <div class="product-article-container">
+            <% for (i=0; i<users.length; i++){%>
+
+                <article class="product-article">
+                        <div class="products-col1">
+                            <img src="/img/users/<%= users[i].image %> " alt="Imagen de usuario" class="products-img" />
+                        </div>
+                        
+                        </div>
+                    <h4 class="product-detail-text product-detail-title">
+                        <p>Nombre: <%= users[i].names %></p>
+                    <p>Domicilio: <%= users[i].address %>
+                    </p>
+                            <p>Email: <%= users[i].email %></p>
+                                
+                    </h4>
+                   
+                </article>
+
+                <% } %>
+        </div>
+    </section>
+    <footer class="footer">
+        <%- include('./partials/footer') %>
+    </footer>
+</body>
+
+</html>

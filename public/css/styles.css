@@ -138,7 +138,9 @@ header {
 #cart-main {
     margin: 0 auto;
     text-align: -moz-center;
+    
 }
+
 #registration-form-box,
 #login-form-box,
 #cart-main,
@@ -152,6 +154,8 @@ header {
     margin: 20px;
     width: 70vw;
 }
+
+
 #cart-main,
 .product-detail-main,
 .admin-product-main {
