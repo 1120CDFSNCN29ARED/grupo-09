@@ -14,6 +14,12 @@
 
         <main id="registration-main">
             <div id="registration-form-box">
+            <% if (locals && locals.errors) { %>
+                <% for (const error in errors) { %>
+                    <p><%= errors[error].msg %></p>
+                <% } %>
+  
+                 <% } %>
                 <form action="/users" method="POST" class="registration-form" enctype="multipart/form-data">
                     <div class="registration-box">
                         <label for="names" class="registration-box-label">Nombre y Apellido:</label>

@@ -1,6 +1,6 @@
-//const { restart } = require("nodemon");
 const fs = require("fs");
 const path = require("path");
+const { validationResult } = require('express-validator');
 
 const usersFilePath = path.resolve(__dirname, "../../Users.json");
 const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
@@ -22,22 +22,29 @@ const controlador = {
   },
 
   registration: (req, res) => {
-   let newUser = {
-     names: req.body.names,
-     email: req.body.email,
-     address: req.body.address,
-     password: bcrypt.hashSync(req.body.password, 10),
-   };
-  newUser.image = req.file.filename;
-  let greatestId = 0;
-  users.map((user) => {
-    user.id > greatestId ? (greatestId = user.id) : "";
-  });
-  newUser.id = greatestId + 1;
-  users.push(newUser);
-  fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 4));
-  console.log("********* CREATION SUCCESSFUL **************");
-  res.redirect("/users");
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.render('registration', {
+        errors: errors.mapped(),
+        oldData: req.body,
+      });
+    } else {
+      let greatestId = 0;
+      users.map((user) => {
+        user.id > greatestId ? (greatestId = user.id) : '';
+      });
+      let newUser = {
+        ...req.body,
+        password: bcrypt.hashSync(req.body.password, 10),
+        image: req.file.filename,
+        id: greatestId + 1,
+      };
+      users.push(newUser);
+      fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 4));
+      console.log("********* CREATION SUCCESSFUL **************");
+      res.send('********* CREATION SUCCESSFUL **************')
+//      res.redirect("/users/register");
+    }
   },
 };
 

@@ -122,5 +122,32 @@
         "password": "$2a$10$2AJnSNx3iwtCtE7n18D5m.6qtZA/VSLwcaPnP9Pu/23Ri7GmM87bm",
         "image": "1617974037962fitzroy-nevado.jpg",
         "id": 14
+    },
+    {
+        "names": "vgdg",
+        "email": "ff@hgh",
+        "address": "ss",
+        "password": "$2a$10$RW.QQxNXgSomp2r0zfvlseDjs.20hPggCQjU5I61.fJLrewbBqJEq",
+        "confirm-password": "gggggggg",
+        "image": "1618358505178logo_grey_cropped.png",
+        "id": 15
+    },
+    {
+        "names": "vgdg",
+        "email": "ff@hgh",
+        "address": "ss",
+        "password": "$2a$10$Uw7ntPwup6SEuX1LXHezfOyHZ2MI6Se.el4VKuwSlBgkr4UXb4T8a",
+        "confirm-password": "ffffffff",
+        "image": "1618358751169logo_grey_cropped.png",
+        "id": 16
+    },
+    {
+        "names": "fd",
+        "email": "ffff@gfg",
+        "address": "ss",
+        "password": "$2a$10$KwVD8wQXUGEalypNMBXEducPOkKO3J2uO/DSTjRmGG8OCTDHwiHtW",
+        "confirm-password": "00000000",
+        "image": "1618358916502logo_grey_cropped.png",
+        "id": 17
     }
 ]
