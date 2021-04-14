@@ -69,7 +69,9 @@ header {
 .contact-link:active {
     color: var(--nw-orange);
 }
-
+#categories-menu li {
+    align-self: center;
+}
 .fa-times {
     color: var(--nw-orange);
     padding-right: 5px;
@@ -251,6 +253,7 @@ padding-bottom: 5px;
     border-radius: 5px;
     background-color: var(--nw-orange);
     padding: 5px 10px;
+    color: var(--nw-white);
 }
 #create-account-button:active,
 .login-button:active,
@@ -404,7 +407,7 @@ padding-bottom: 5px;
         flex-direction: row;
         justify-content: space-evenly;
         padding: 10px;
-        background-color: var(--nw-beige);
+        background-color: var(--nw-grey);
         height: 30px;
         align-content: center;
     }
@@ -413,20 +416,22 @@ padding-bottom: 5px;
     }
     .categories-item {
         padding: 3px 1vw ;
-        color: var(--nw-grey);
+        color: var(--nw-white);
         font-weight: bold;
     }
     #account-menu {
         display: flex;
         flex-direction: row;
         align-self: center;
-        padding: 0 6vw 0 0;
+        padding: 0 0 0 0;
         width: 100%;
         height: 20px;
-        justify-content: right;
+        justify-content: center;
+        background-color: var(--nw-beige);
     }
     .account-menu-item {
         padding: 4vw;
+        color: var(--nw-grey);
     }
 
 }
