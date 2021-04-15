@@ -1,7 +1,6 @@
 const { check } = require('express-validator');
 
-const loginValidation = (req, res, next) => {
-    [
+module.exports=  [
         check('user')
         .not()
         .isEmpty()
@@ -13,7 +12,3 @@ const loginValidation = (req, res, next) => {
         .matches('[0-9]').withMessage('Debe contener al menos 1 número').bail()
         .matches('[A-Z]').withMessage('Debe contener al menos una letra mayúscula').bail(),
     ];
-    next();
-} 
-
-module.exports = loginValidation;

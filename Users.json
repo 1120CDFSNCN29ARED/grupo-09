@@ -149,5 +149,23 @@
         "confirm-password": "00000000",
         "image": "1618358916502logo_grey_cropped.png",
         "id": 17
+    },
+    {
+        "names": "Andres Villarreal",
+        "email": "andrus1st@gmail.com",
+        "address": "Mendoza 2999",
+        "password": "$2a$10$CrcxMu4HoQdmQagtqR2FJu5RORsPRIcC9.Rsor2q55GhDH0dJtHLi",
+        "confirm-password": "111111",
+        "image": "1618448685611180539_00103.jfif",
+        "id": 18
+    },
+    {
+        "names": "Andres Villarreal",
+        "email": "andrus1st@gmail.com",
+        "address": "Mendoza 2999",
+        "password": "$2a$10$umKhwsNnbpasj.t6DwVx2OZ3637r7qfUc10//y9b4FgCMh6dM/9T.",
+        "confirmPassword": "1AAAAAAA",
+        "image": "161845327658815.jpeg",
+        "id": 19
     }
 ]

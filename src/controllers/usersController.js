@@ -24,6 +24,7 @@ const controlador = {
   registration: (req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
+      console.log(errors);
       return res.render('registration', {
         errors: errors.mapped(),
         oldData: req.body,

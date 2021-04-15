@@ -16,7 +16,7 @@ module.exports = [
         .matches('[0-9]').withMessage('Debe contener al menos 1 número').bail()
         .matches('[A-Z]').withMessage('Debe contener al menos una letra mayúscula').bail(),
     
-    check('confirm-password').custom( (value, {req}) => {
+    check('confirmPassword').custom( (value, {req}) => {
         let password = req.body.password;
         if (value != password) {
             throw new Error('Las contraseñas no coinciden');
