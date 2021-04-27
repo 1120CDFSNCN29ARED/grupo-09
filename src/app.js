@@ -3,6 +3,15 @@ const app = express();
 const path = require('path');
 const publicPath = path.resolve(__dirname, './public');
 const methodOverride = require('method-override');
+const session = require('express-session');
+const cookieParser = require('cookie-parser');
+
+app.use(session({
+    secret: 'Antique Maps',
+    resave: false,
+    saveUninitialized: true,
+}));
+app.use(cookieParser());
 
 const routesIndex = require("./routes/index");
 const routesUsers = require("./routes/users");

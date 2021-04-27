@@ -43,10 +43,36 @@ const controlador = {
       users.push(newUser);
       fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 4));
       console.log("********* CREATION SUCCESSFUL **************");
-      res.send('********* CREATION SUCCESSFUL **************')
-//      res.redirect("/users/register");
+      return res.redirect("/");
     }
   },
-};
+
+  login: (req, res) => {
+    const errors =validationResult(req);
+    if (!errors.isEmpty()) {
+      console.log(errors);
+      return res.render('login', {
+        errors: errors.mapped(),
+        oldData: req.body,
+      });
+    } else {
+      let enteredUser = req.body.user;
+      let enteredPassword = req.body.password;
+      
+      let user = users.filter( user => user.email == enteredUser);
+      if(!user) {
+        return res.render('login', {
+          errors: 'El email no pertenece a un usuario registrado.',
+          oldData: req.body,
+        });
+      } else {
+        enteredPassword =  bcrypt.compareSync(enteredPassword, hash);
+        user.password == enteredPassword ? res.render('/users/profile', { user }) : res.render('login', {
+          errors: 'La contraseña es incorrecta.',
+          oldData: req.body,
+        });
+      }
+  }
+}};
 
 module.exports = controlador;

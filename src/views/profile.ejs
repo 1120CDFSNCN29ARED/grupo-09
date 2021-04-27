@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head') %>
+</head>
+
+<body>
+    <header>
+        <%- include('./partials/header') %>
+    </header>
+    <main>
+        <div id='profile-div' class="product">
+            <img src="/img/users/<%= user.image %>" alt="profile picture">
+            <p>Nombres: <%= user.names %> </p>
+            <p>E-Mail: <%= user.email %> </p>
+            <p>Domicilio: <%= user.address %> </p>
+        </div>
+    </main>
+    <footer class="footer footer-fixed">
+        <%- include('./partials/footer') %>
+    </footer>
+</body>
+
+</html>
