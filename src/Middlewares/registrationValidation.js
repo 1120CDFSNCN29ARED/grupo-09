@@ -24,6 +24,7 @@ module.exports = [
         return true;
     }),
     
+    
     check('image').custom( (value, {req}) => {
         let file = req.file;
         let acceptedExtensions = ['.jpg', '.jpeg', '.png', '.gif'];
