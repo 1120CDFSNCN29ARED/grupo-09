@@ -182,5 +182,53 @@
         "password": "$2a$10$4QJRIEa7XYv5Qd4C9yaQOePeBZ9KoQoWHvDNh3IgQlMl3grXbJF4W",
         "image": "1619569125611logo_grey_cropped.png",
         "id": 21
+    },
+    {
+        "names": "Andres Villarreal",
+        "email": "andrus1st@gmail.com",
+        "address": "Mendoza 2999, piso 5 A",
+        "password": "$2a$10$3mv2NscJKC6w3DJoppB2rOf4mRQMAiV9HcNrcWNa3JtYgKxy.9KqK",
+        "image": "1619902447604fitzroy-nevado.jpg",
+        "id": 22
+    },
+    {
+        "names": "Andres Villarreal",
+        "email": "andrus1st@gmail.com",
+        "address": "Mendoza 2999, piso 5 A",
+        "password": "$2a$10$aidCt0fcIl8skU2yed/qKuGieUxozru7g2dRapcv77e8xy6SICsTe",
+        "image": "1619906401391fitzroy-nevado.jpg",
+        "id": 23
+    },
+    {
+        "names": "Andres Villarreal",
+        "email": "andrus1st@gmail.com",
+        "address": "Mendoza 2999, piso 5 A",
+        "password": "$2a$10$mzC/275nDxISXVha4M.46OrxMFiWpnYLNOaiWFL1mmpj6ulKsb8TG",
+        "image": "1619906580118fitzroy-nevado.jpg",
+        "id": 24
+    },
+    {
+        "names": "Andres Villarreal",
+        "email": "andrus1st@gmail.com",
+        "address": "Mendoza 2999, piso 5 A",
+        "password": "$2a$10$cFpM4xNHgwJ2Zv14FLNZT.Qo8PNzWot8rmuPlgW7zbXmcYQ8PTkGq",
+        "image": "1619906723640fitzroy-nevado.jpg",
+        "id": 25
+    },
+    {
+        "names": "Andres Villarreal",
+        "email": "andrus1st@gmail.com",
+        "address": "Mendoza 2999, piso 5 A",
+        "password": "$2a$10$tpdrdEKIF3hcr.A0.a8S2OaDL9K4ajfCqUNFn4uWttlexruRsk9Ie",
+        "image": "1619926642751fitzroy-nevado.jpg",
+        "id": 26
+    },
+    {
+        "names": "Andres Villarreal",
+        "email": "lmmk@gmail.com",
+        "address": "Mendoza 2999, piso 5 A",
+        "password": "$2a$10$GLSzt/1yHSCCffo30xmXb.V5eMf4RrkiNqCygCwUQciSIWh6WthV.",
+        "image": "1619928627847fitzroy-nevado.jpg",
+        "id": 27
     }
 ]

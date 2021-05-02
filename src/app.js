@@ -31,5 +31,8 @@ app.set("views", path.resolve(__dirname, "views"));
 app.use(express.static(publicPath));
 app.use(express.static('public'));
 app.use(methodOverride('_method'));
+app.use(express.urlencoded({extended: false}));
+app.use(express.json());
+
 
 module.exports = app;
