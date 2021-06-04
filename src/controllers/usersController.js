@@ -73,15 +73,17 @@ const controlador = {
   },
 
   login: (req, res) => {
-    const errors = validationResult(req);
-    if (!errors.isEmpty()) {
+    
+               const errors = validationResult(req);
+            if (!errors.isEmpty()) {
       return res.render("login", {
         errors: errors.mapped(),
         oldData: req.body,
       });
     }
-
+    
     let enteredUser = req.body.user;
+    console.log(enteredUser)
     let enteredPassword = req.body.password;
     let user = users.find((user) => user.email == enteredUser);
     if (!user) {

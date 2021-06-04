@@ -230,5 +230,29 @@
         "password": "$2a$10$GLSzt/1yHSCCffo30xmXb.V5eMf4RrkiNqCygCwUQciSIWh6WthV.",
         "image": "1619928627847fitzroy-nevado.jpg",
         "id": 27
+    },
+    {
+        "names": "Andres Villarreal",
+        "email": "jjdjds@gmail.com",
+        "address": "Mendoza 2999, piso 5 A",
+        "password": "$2a$10$qjMc2R6kb6M7nG4JFaOdNeiRW5GK1q2jD.nIr.qi7yqP6SCRwtE1i",
+        "image": "1620067616352fitzroy-nevado.jpg",
+        "id": 28
+    },
+    {
+        "names": "Andres Villarreal",
+        "email": "mksojf@gmail.com",
+        "address": "Mendoza 2999, piso 5 A",
+        "password": "$2a$10$ZzcMXWkdVs0Wn9ImGFwSSuiHlbPIsvDg.dGGo1GJtlqIeMp5cLil2",
+        "image": "1620067678137fitzroy-nevado.jpg",
+        "id": 29
+    },
+    {
+        "names": "Andres Villarreal",
+        "email": "juani@gmail.com",
+        "address": "Mendoza 2999, piso 5 A",
+        "password": "$2a$10$/gsZ8OA6A1oRkVxXmr3QCO0xKll4gafuqX8zOakIkTU3tEbTwIOku",
+        "image": "1622591141463fitzroy-nevado.jpg",
+        "id": 30
     }
 ]
