@@ -17,9 +17,21 @@
                 <li><a href="/products" class="categories-item"><i class="fas fa-times"></i>Polos</a></li>
             </ul>
             <ul id="account-menu" class="nav-list">
-                <li><a href="/users/login" class="account-menu-item">Ingresar</a></li>
-                <li><a href="/users/register" class="account-menu-item">Crear Cuenta</a></li>
+                <% if (!locals.userLogged) { %> 
+                
+                    <li><a href="/users/login" class="account-menu-item">Ingresar</a></li>
+                    <li><a href="/users/register" class="account-menu-item">Crear Cuenta</a></li>
+                    <li><a href="/cart" class="account-menu-item">Carrito</a></li>
+
+
+                <% } else { %>
+
+                <li><a href="/users/login" class="account-menu-item">Hola <%= locals.userLogged.names %> </a></li>
+                <li><a href="/users/logout" class="account-menu-item">Logout</a></li>
                 <li><a href="/cart" class="account-menu-item">Carrito</a></li>
+
+                <% } %>
+                
             </ul>
         </nav>
     </div>

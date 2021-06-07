@@ -22,8 +22,7 @@ const controlador = {
   },
 
   profile: (req, res) => {
-    console.log(req.session.userLogged)
-    res.render("profile", {user: req.session.userLogged});
+        res.render("profile", {user: req.session.userLogged});
   },
 
   registration: (req, res) => {
@@ -113,6 +112,12 @@ const controlador = {
       }
     }
   },
+
+logout: (req, res)=>{
+  req.session.destroy();
+  return res.redirect("/");
+}
+
 };
 
 module.exports = controlador;
