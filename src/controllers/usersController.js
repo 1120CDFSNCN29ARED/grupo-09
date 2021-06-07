@@ -5,6 +5,7 @@ const { validationResult } = require("express-validator");
 const usersFilePath = path.resolve(__dirname, "../../Users.json");
 const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
 const bcrypt = require("bcryptjs");
+//const { delete } = require("../app");
 
 const controlador = {
   index: (req, res) => {
@@ -21,13 +22,13 @@ const controlador = {
   },
 
   profile: (req, res) => {
-    res.render("profile");
+    console.log(req.session.userLogged)
+    res.render("profile", {user: req.session.userLogged});
   },
 
   registration: (req, res) => {
-    
     const errors = validationResult(req);
-            if (!errors.isEmpty()) {
+    if (!errors.isEmpty()) {
       return res.render("registration", {
         errors: errors.mapped(),
         oldData: req.body,
@@ -40,12 +41,12 @@ const controlador = {
       return res.render("registration", {
         errors: {
           email: {
-            msg: "Email ya registrado"
-          }
+            msg: "Email ya registrado",
+          },
         },
         oldData: req.body,
       });
-    };
+    }
 
     if (req.body.confirmPassword == req.body.password) {
       let greatestId = 0;
@@ -73,32 +74,43 @@ const controlador = {
   },
 
   login: (req, res) => {
-    
-               const errors = validationResult(req);
-            if (!errors.isEmpty()) {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
       return res.render("login", {
         errors: errors.mapped(),
         oldData: req.body,
       });
     }
-    
+
     let enteredUser = req.body.user;
-    console.log(enteredUser)
-    let enteredPassword = req.body.password;
-    let user = users.find((user) => user.email == enteredUser);
+        let enteredPassword = req.body.password;
+        let user = users.find((user) => user.email == enteredUser);
+    
     if (!user) {
       return res.render("login", {
-        errors: "El email no pertenece a un usuario registrado.",
+        errors: {
+          user: {
+            msg: "El email no pertenece a un usuario registrado.",
+          },
+        },
         oldData: req.body,
       });
     } else {
-      enteredPassword = bcrypt.compareSync(enteredPassword, hash);
-      user.password == enteredPassword
-        ? res.render("/users/profile", { user })
-        : res.render("login", {
-            errors: "La contraseña es incorrecta.",
-            oldData: req.body,
-          });
+      enteredPassword = bcrypt.compareSync(enteredPassword, user.password);
+      if (enteredPassword) {
+        delete user.password;
+        req.session.userLogged = user;
+        res.redirect("profile");
+      } else {
+        res.render("login", {
+          errors: {
+            password: {
+              msg: "La contraseña es incorrecta.",
+            },
+          },
+          oldData: req.body,
+        });
+      }
     }
   },
 };
