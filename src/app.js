@@ -6,6 +6,8 @@ const methodOverride = require('method-override');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
 
+require('dotenv').config()
+
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
