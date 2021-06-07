@@ -10,6 +10,8 @@ const routesIndex = require("./routes/index");
 const routesUsers = require("./routes/users");
 const routesProducts = require("./routes/products");
 
+require('dotenv').config()
+
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.static(publicPath));

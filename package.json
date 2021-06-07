@@ -21,12 +21,16 @@
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cookie-parser": "^1.4.5",
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "express-session": "^1.17.1",
     "express-validator": "^6.10.0",
     "method-override": "^3.0.0",
     "multer": "^1.4.2",
-    "normalize.css": "^8.0.1"
+    "mysql": "^2.18.1",
+    "mysql2": "^2.2.5",
+    "normalize.css": "^8.0.1",
+    "sequelize": "^6.6.2"
   },
   "devDependencies": {
     "ejs": "^3.1.6",
