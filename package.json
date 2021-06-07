@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon ./src/app.js"
+    "start": "nodemon -r dotenv/config ./src/app.js"
   },
   "repository": {
     "type": "git",
@@ -21,7 +21,6 @@
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cookie-parser": "^1.4.5",
-    "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "express-session": "^1.17.1",
     "express-validator": "^6.10.0",
@@ -33,6 +32,7 @@
     "sequelize": "^6.6.2"
   },
   "devDependencies": {
+    "dotenv": "^10.0.0",
     "ejs": "^3.1.6",
     "nodemon": "^2.0.7"
   }
