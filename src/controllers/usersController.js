@@ -62,6 +62,7 @@ const controlador = {
       };
       users.push(newUser);
       fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 4));
+      console.log(newUser);
       console.log("********* CREATION SUCCESSFUL **************");
       return res.render("profile", { user: newUser });
     } else {
