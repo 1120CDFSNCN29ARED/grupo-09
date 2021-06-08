@@ -3,11 +3,11 @@ const router = express.Router();
 const multer = require("multer");
 const path = require("path");
 
-const loginValidation = require('../middlewares/loginValidation');
-const registrationValidation = require('../middlewares/registrationValidation');
+const loginValidation = require('../Middlewares/loginValidation');
+const registrationValidation = require('../Middlewares/registrationValidation');
 const usersController = require("../controllers/usersController");
-const guestMiddleware = require("../middlewares/guestMiddelware");
-const authMiddleware = require("../middlewares/authMiddleware");
+const guestMiddleware = require("../Middlewares/guestMiddelware");
+const authMiddleware = require("../Middlewares/authMiddleware");
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {

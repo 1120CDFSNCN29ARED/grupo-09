@@ -1,16 +1,19 @@
 const express = require('express');
+const cors = require('cors');
 const app = express();
 const path = require('path');
 const publicPath = path.resolve(__dirname, './public');
 const methodOverride = require('method-override');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
-const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware");
+const userLoggedMiddleware = require("./Middlewares/userLoggedMiddleware");
 const routesIndex = require("./routes/index");
 const routesUsers = require("./routes/users");
 const routesProducts = require("./routes/products");
 
-require('dotenv').config()
+app.use(cors());
+
+require('dotenv').config();
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());

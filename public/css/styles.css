@@ -212,6 +212,17 @@ header {
     align-self: center;
     padding-bottom: 15px;
 }
+.profile-img {
+    align-self: center;
+    padding-bottom: 15px;
+    max-width: 31%;
+}
+#profile-div {
+    background-color: var(--nw-orange);
+}
+#profile-section {
+    background-color: white;
+}
 .product-description {
     text-align: justify;
 }

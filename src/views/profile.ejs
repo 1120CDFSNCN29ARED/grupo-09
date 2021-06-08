@@ -9,12 +9,12 @@
     <header>
         <%- include('./partials/header') %>
     </header>
-    <main>
-        <div id='profile-div' class="product">
-            <img src="/img/users/<%= user.image %>" alt="profile picture">
-            <p>Nombres: <%= user.names %> </p>
-            <p>E-Mail: <%= user.email %> </p>
-            <p>Domicilio: <%= user.address %> </p>
+    <main class="product-detail-main"  id='profile-div'>
+        <div class="product product-detail-section" id="profile-section">
+            <img src="/img/users/<%=user.image%>" alt="profile picture" class="profile-img" />
+            <p><b>Nombres:</b> <%= user.names %> </p>
+            <p><b>E-Mail:</b> <%= user.email %> </p>
+            <p><b>Domicilio:</b> <%= user.address %> </p>
         </div>
     </main>
     <footer class="footer footer-fixed">
