@@ -1,3 +1,5 @@
+create database AMapsDb;
+
 use AMapsDb;
 drop table if exists Users;
 create table Users (
