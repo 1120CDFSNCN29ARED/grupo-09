@@ -18,6 +18,5 @@ Continent varchar(50),
 Description text not null,
 UnitPrice decimal(10, 2),
 Image varchar(100) not null,
-Stock int,
 primary key(Id)
 );

@@ -218,5 +218,13 @@
         "password": "$2a$10$Fb/Qytq3Z6gVr/yoD6dolehLp8wTuZfwBo4Yt5dUcAO6NJOiGUFAG",
         "image": "16231885875670profile.jpeg",
         "id": 41
+    },
+    {
+        "names": "unacuenta",
+        "email": "unacuenta@demail.com",
+        "address": "calle 234",
+        "password": "$2a$10$LRuEYS4PJvuH3gv5cOtxS.hRvcrPJkbPuSSwHWQTQDyEq1WXUwdkG",
+        "image": "16232706468130profile.jpeg",
+        "id": 42
     }
 ]

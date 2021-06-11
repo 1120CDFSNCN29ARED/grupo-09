@@ -1,6 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
+const db = require('../database/models');
+
 const productsFilePath = path.resolve(__dirname, '../../Products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
@@ -15,6 +17,55 @@ const productsController = {
     const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
     res.render('products', { products });
   },
+ /*
+  index: (req, res) => {
+    db.Products.findAll()
+      .then(function(products){
+        res.render('products', {products})
+      })
+  },
+  showProduct: (req, res) => {
+    db.Products.findByPk(req.params.id)
+    .then(product) {
+      res.render('productDetail', { product });
+    },
+  },
+    createNewProduct: (req, res) => {
+    db.Products.create({
+      name: req.body.name,
+      continent: req.body.continent,
+      description: req.body.description,
+      unitPrice: req.body.unitPrice,
+      image: req.file.filename,
+    })
+  },
+  edit: (req, res) => {
+    db.Products.findByPk(req.params.id)
+      .then(function(product) {
+        res.render('editProduct', { product })
+      })
+  },
+  update: (req, res) => {
+    db.Products.update({
+      name: req.body.name,
+      continent: req.body.continent,
+      description: req.body.description,
+      unitPrice: req.body.unitPrice,
+      image: req.file.filename,
+    }, {
+      where: {
+        id: req.params.id
+      }
+    })
+  },
+  deleteProduct: (req, res) => {
+    db.Products.destroy({
+      where: {
+        id: req.params.id
+      }
+    })
+  },
+ */
 
   showProduct: (req, res) => {
     const id = req.params.id;
@@ -42,8 +93,7 @@ const productsController = {
     console.log('********* CREATION SUCCESSFUL **************');
     res.redirect('/');
   },
-
-  deleteProduct: (req, res) => {
+  deteProduct: (req, res) => {
     console.log('EL ID ES '+req.params.id);
     let remainingProducts = products.filter(product => product.id != req.params.id);
     fs.writeFileSync(productsFilePath, JSON.stringify(remainingProducts, null, 4));
