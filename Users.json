@@ -220,11 +220,19 @@
         "id": 41
     },
     {
-        "names": "unacuenta",
-        "email": "unacuenta@demail.com",
-        "address": "calle 234",
-        "password": "$2a$10$LRuEYS4PJvuH3gv5cOtxS.hRvcrPJkbPuSSwHWQTQDyEq1WXUwdkG",
-        "image": "16232706468130profile.jpeg",
-        "id": 42
+        "names": "Andres V",
+        "email": "andresv@gmail.com",
+        "address": "calle 123",
+        "password": "$2a$10$USfvHQmERkS7kXs.JOOine0gKCj39T.QFKO421lmojNr.q50adRfW",
+        "image": "1623270318055fitzroy-nevado.jpg",
+        "id": 43
+    },
+    {
+        "names": "andres andres",
+        "email": "andres@gmail.com",
+        "address": "calle 123",
+        "password": "$2a$10$RxPp0E4z/pFf7mlK/44qMOJhsZzXvZIIEOEOFMIbp0029JrDej71O",
+        "image": "1623271209473fitzroy-nevado.jpg",
+        "id": 44
     }
 ]
