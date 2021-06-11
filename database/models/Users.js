@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-const sequelize = require('database'); 
+// const sequelize = require('database'); 
 
 module.exports = (Sequelize, DataTypes) => {
     let alias = 'User';
@@ -23,5 +23,5 @@ module.exports = (Sequelize, DataTypes) => {
             type: DataTypes.STRING(100)
         },
     }
-    const User = Sequelize.define(alias, cols);
+//    const User = sequelize.define(alias, cols);
 }
