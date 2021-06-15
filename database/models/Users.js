@@ -23,5 +23,5 @@ module.exports = (Sequelize, DataTypes) => {
             type: DataTypes.STRING(100)
         },
     }
-//    const User = sequelize.define(alias, cols);
+    const User = sequelize.define(alias, cols);
 }
