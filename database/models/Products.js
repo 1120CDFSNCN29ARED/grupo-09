@@ -22,6 +22,9 @@ module.exports = (Sequelize, DataTypes) => {
         image: {
             type: DataTypes.STRING(100)
         },
+        stock: {
+            type: DataTypes.INTEGER
+        }
     }
     const Product = sequelize.define(alias, cols);
 }

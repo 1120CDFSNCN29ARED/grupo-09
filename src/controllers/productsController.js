@@ -21,9 +21,9 @@ const productsController = {
   },
   showProduct: (req, res) => {
     db.Products.findByPk(req.params.id)
-    .then(product) {
+    .then(function(product) {
       res.render('productDetail', { product });
-    },
+    })
   },
   
    createForm: (req, res) => {
@@ -36,6 +36,7 @@ const productsController = {
       description: req.body.description,
       unitPrice: req.body.unitPrice,
       image: req.file.filename,
+      stock: req.body.stock,
     })
       console.log('********* CREATION SUCCESSFUL **************');
       res.redirect('/');
