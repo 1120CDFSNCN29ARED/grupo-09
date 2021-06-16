@@ -8,7 +8,7 @@ const usersFilePath = path.resolve(__dirname, '../../Users.json');
 const bcrypt = require('bcryptjs');
 //const { delete } = require("../app");
 
-const controlador = {
+const usersController = {
   index: (req, res) => {
     db.Users.findAll()
       .then(function(users){
@@ -154,4 +154,4 @@ logout: (req, res)=>{
 
 };
 
-module.exports = controlador;
+module.exports = usersController;
