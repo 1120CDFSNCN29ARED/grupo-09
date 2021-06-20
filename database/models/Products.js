@@ -24,7 +24,21 @@ module.exports = (Sequelize, DataTypes) => {
         },
         stock: {
             type: DataTypes.INTEGER
+        },
+        id_serial_number: {
+            type: DataTypes.INTEGER
         }
     }
+    let config = {
+        tableName : "product",
+        timestamps: false
+    }
     const Product = sequelize.define(alias, cols);
+}
+
+Product.associate = function(models){
+    Product.hasMany (models.Serial_Numbers, {
+        foreignkey: "id_product" ,
+        as : "Serial_number"
+    })
 }

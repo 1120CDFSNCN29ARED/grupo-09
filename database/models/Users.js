@@ -25,3 +25,12 @@ module.exports = (Sequelize, DataTypes) => {
     }
     const User = sequelize.define(alias, cols);
 }
+User.asscoiate = function(models){
+    User.belongsToMany (models.Serial_Number, {
+        as: "Products",
+        through: "Sale", 
+        foreignKey: "id_user", 
+        otherKey: "id_serial_number", 
+        timesTamp: false
+    })
+}
