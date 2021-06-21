@@ -7,9 +7,9 @@ module.exports = [
     .isLength({ min: 8 })
     .bail()
     .matches("[0-9]")
-    .withMessage("Debe contener al menos 1 número")
+    .withMessage("Contraseña incorrecta")
     .bail()
     .matches("[A-Z]")
-    .withMessage("Debe contener al menos una letra mayúscula")
+    .withMessage("Contraseña incorrecta")
     .bail(),
 ];
