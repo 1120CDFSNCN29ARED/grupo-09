@@ -31,4 +31,5 @@ module.exports = (sequelize, DataTypes) => {
             timesTamp: false
         })
 }
+return User
 }

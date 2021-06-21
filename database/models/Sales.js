@@ -14,4 +14,5 @@ module.exports = (sequelize, DataTypes) => {
         
     }
     const Sale = sequelize.define(alias, cols);
+    return Sale
 }

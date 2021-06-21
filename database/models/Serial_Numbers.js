@@ -12,12 +12,12 @@ module.exports = (sequelize, DataTypes) => {
     const Serial_Number = sequelize.define(alias, cols);
 
     Serial_Number.associate = function(models){
-        Serial_Number.BelongTo (models.Products, {
-            foreignkey: "id_serial_number" ,
+        Serial_Number.belongsTo(models.Products, {
+            foreignKey: "id_serial_number" ,
             as : "Products"
         })
         Serial_Number.asscoiate = function(models){
-            Serial_Number.belongsToMany (models.User, {
+            Serial_Number.belongsToMany(models.User, {
                 as: "Serial_Number",
                 through: "Sale", 
                 foreignKey: "id_serial_number", 
@@ -26,4 +26,5 @@ module.exports = (sequelize, DataTypes) => {
             })
         }
 }
+return Serial_Number
 }
