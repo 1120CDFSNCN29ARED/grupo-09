@@ -16,6 +16,11 @@
                 <li><a href="/products" class="categories-item"><i class="fas fa-times"></i>Oceanía</a></li>
                 <li><a href="/products" class="categories-item"><i class="fas fa-times"></i>Polos</a></li>
             </ul>
+                <form action="/action_page.php">
+                    <input id="search-bar" type="text" placeholder="Buscar.." name="search">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </form>
+
             <ul id="account-menu" class="nav-list">
                 <% if (!locals.userLogged) { %> 
                 
@@ -36,6 +41,8 @@
         </nav>
     </div>
     <nav id="nav-wide" class="account-menu">
+
+
         <ul class="account-menu-list">
             <li class="account-menu-container"><div class="account-menu-text"><a href="/users/login">Ingresar</a></div><div class="account-menu-icon"><a href="login"><i class="fas fa-sign-in-alt"></i></a></div></li>
             <li class="account-menu-container"><div class="account-menu-text"><a href="/users/register">Crear Cuenta</a></div><div class="account-menu-icon"><a href="registration"><i class="fas fa-user-plus"></i></a></div></li>

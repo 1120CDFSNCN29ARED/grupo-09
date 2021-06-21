@@ -34,7 +34,14 @@ header {
     min-width: 480px;
     width: 100vw;
 }
-
+#search-bar {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+}
 .content-wrapper {
     text-align: -webkit-center;
 }
