@@ -1,11 +1,9 @@
-const Sequelize = require('sequelize');
-// const sequelize = require('database');
-
-module.exports = (Sequelize, DataTypes) => {
+module.exports = (sequelize, DataTypes) => {
     let alias = 'Product';
     let cols = {
         id : {
-            type: DataTypes.INTEGER
+            type: DataTypes.INTEGER,
+            primaryKey: true
         },
         name : {
             type: DataTypes.STRING(50)
@@ -34,11 +32,12 @@ module.exports = (Sequelize, DataTypes) => {
         timestamps: false
     }
     const Product = sequelize.define(alias, cols);
+
+    Product.associate = function(models){
+        Product.hasMany (models.Serial_Numbers, {
+            foreignkey: "id_product" ,
+            as : "Serial_number"
+        })
 }
 
-Product.associate = function(models){
-    Product.hasMany (models.Serial_Numbers, {
-        foreignkey: "id_product" ,
-        as : "Serial_number"
-    })
 }

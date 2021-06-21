@@ -1,3 +1,4 @@
+drop database if exists AMapsDb;
 create database AMapsDb;
 
 use AMapsDb;

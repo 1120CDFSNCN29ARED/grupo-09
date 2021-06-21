@@ -1,11 +1,9 @@
-const Sequelize = require('sequelize');
-// const sequelize = require('database');
-
-module.exports = (Sequelize, DataTypes) => {
+module.exports = (sequelize, DataTypes) => {
     let alias = 'Sales';
     let cols = {
         id: {
-            type: DataTypes.INTEGER
+            type: DataTypes.INTEGER,
+            primaryKey: true
         },
         id_user: {
             type: DataTypes.INTEGER

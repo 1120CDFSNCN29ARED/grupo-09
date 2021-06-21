@@ -1,11 +1,9 @@
-const Sequelize = require('sequelize');
-// const sequelize = require('database'); 
-
-module.exports = (Sequelize, DataTypes) => {
+module.exports = (sequelize, DataTypes) => {
     let alias = 'User';
     let cols = {
         id: {
-            type: DataTypes.INTEGER
+            type: DataTypes.INTEGER,
+            primaryKey: true
         },
         names: {
             type: DataTypes.STRING(50)
@@ -24,13 +22,13 @@ module.exports = (Sequelize, DataTypes) => {
         },
     }
     const User = sequelize.define(alias, cols);
+    User.asscoiate = function(models){
+        User.belongsToMany (models.Serial_Number, {
+            as: "Products",
+            through: "Sale", 
+            foreignKey: "id_user", 
+            otherKey: "id_serial_number", 
+            timesTamp: false
+        })
 }
-User.asscoiate = function(models){
-    User.belongsToMany (models.Serial_Number, {
-        as: "Products",
-        through: "Sale", 
-        foreignKey: "id_user", 
-        otherKey: "id_serial_number", 
-        timesTamp: false
-    })
 }
