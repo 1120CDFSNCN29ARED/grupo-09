@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING(50)
         },
         description: {
-            type: DataTypes.STRING(500)
+            type: DataTypes.STRING(1500)
         },
         unitPrice: {
             type: DataTypes.DECIMAL(2)
@@ -22,16 +22,16 @@ module.exports = (sequelize, DataTypes) => {
         },
         stock: {
             type: DataTypes.INTEGER
-        },
-        id_serial_number: {
-            type: DataTypes.INTEGER
         }
+        // id_serial_number: {
+        //     type: DataTypes.INTEGER
+        // }
     }
-    let config = {
-        tableName : "product",
-        timestamps: false
-    }
-    const Product = sequelize.define(alias, cols);
+    const Product = sequelize.define(alias, cols,
+        {
+            tableName : "products",
+            timestamps: false,
+        });
 
     Product.associate = function(models){
         Product.hasMany (models.Serial_Numbers, {

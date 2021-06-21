@@ -14,7 +14,7 @@ const formatter = new Intl.NumberFormat('es-AR', {
 //formatter.format(n);
 const productsController = {
   index: (req, res) => {
-    db.Products.findAll()
+    db.Product.findAll()
       .then(function(products){
         res.render('products', {products})
       })
