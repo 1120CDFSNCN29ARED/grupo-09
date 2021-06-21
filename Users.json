@@ -234,5 +234,20 @@
         "password": "$2a$10$RxPp0E4z/pFf7mlK/44qMOJhsZzXvZIIEOEOFMIbp0029JrDej71O",
         "image": "1623271209473fitzroy-nevado.jpg",
         "id": 44
+    },
+    {
+        "names": "Andres Villarreal",
+        "email": "dfgfd@gmail.com",
+        "address": "Mendoza 2999, piso 5 A",
+        "image": "1623279137882fitzroy-nevado.jpg",
+        "id": 45
+    },
+    {
+        "names": "pepito oreo",
+        "email": "pepito@gmail.com",
+        "address": "calle 123",
+        "password": "$2a$10$BgrCtK.8O3r6gvrncDbGk.Eas3Qbg17urAVjwpQTLsNwmu20.sLti",
+        "image": "1623282901583fitzroy-nevado.jpg",
+        "id": 46
     }
 ]

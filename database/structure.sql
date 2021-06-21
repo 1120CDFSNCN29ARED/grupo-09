@@ -1,4 +1,5 @@
-create database AMapsDb;
+DROP DATABASE IF EXISTS AMapsDb;
+CREATE DATABASE IF NOT EXISTS AmapsDb;
 
 use AMapsDb;
 drop table if exists Users;
