@@ -14,13 +14,13 @@ const formatter = new Intl.NumberFormat('es-AR', {
 //formatter.format(n);
 const productsController = {
   index: (req, res) => {
-    db.Products.findAll()
+    db.Product.findAll()
       .then(function(products){
         res.render('products', {products})
       })
   },
   showProduct: (req, res) => {
-    db.Products.findByPk(req.params.id)
+    db.Product.findByPk(req.params.id)
     .then(function(product) {
       res.render('productDetail', { product });
     })
@@ -30,7 +30,7 @@ const productsController = {
      res.render('createProduct');
    },
     createNewProduct: (req, res) => {
-    db.Products.create({
+    db.Product.create({
       name: req.body.name,
       continent: req.body.continent,
       description: req.body.description,
@@ -43,7 +43,7 @@ const productsController = {
   },
 
   edit: (req, res) => {
-    db.Products.findByPk(req.params.id)
+    db.Product.findByPk(req.params.id)
       .then(function(product) {
         res.render('editProduct', { product })
       });
@@ -51,7 +51,7 @@ const productsController = {
     res.render('editProduct', { product });
   },
   update: (req, res) => {
-    db.Products.update({
+    db.Product.update({
       name: req.body.name,
       continent: req.body.continent,
       description: req.body.description,
@@ -66,7 +66,7 @@ const productsController = {
   },
   
   deleteProduct: (req, res) => {
-    db.Products.destroy({
+    db.Product.destroy({
       where: {
         id: req.params.id
       }

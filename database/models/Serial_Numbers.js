@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
     const Serial_Number = sequelize.define(alias, cols);
 
     Serial_Number.associate = function(models){
-        Serial_Number.belongsTo(models.Products, {
+        Serial_Number.belongsTo(models.Product, {
             foreignKey: "id_serial_number" ,
             as : "Products"
         })
