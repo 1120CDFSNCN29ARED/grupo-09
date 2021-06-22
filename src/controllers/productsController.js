@@ -16,6 +16,7 @@ const productsController = {
   index: (req, res) => {
     db.Product.findAll()
       .then(function(products){
+        console.log(products)
         res.render('products', {products})
       })
   },

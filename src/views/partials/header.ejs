@@ -16,28 +16,30 @@
                 <li><a href="/products" class="categories-item"><i class="fas fa-times"></i>Oceanía</a></li>
                 <li><a href="/products" class="categories-item"><i class="fas fa-times"></i>Polos</a></li>
             </ul>
-                <form action="/action_page.php" id="search-form">
-                    <input id="search-bar" type="text" placeholder="Buscar.." name="search">
-                    <button type="submit"><i class="fas fa-search"></i></button>
-                </form>
+            <div id="account-menu-outter-box">
 
-            <ul id="account-menu" class="nav-list">
-                <% if (!locals.userLogged) { %> 
-                
-                    <li><a href="/users/login" class="account-menu-item">Ingresar</a></li>
-                    <li><a href="/users/register" class="account-menu-item">Crear Cuenta</a></li>
-                    <li><a href="/cart" class="account-menu-item">Carrito</a></li>
-
-
-                <% } else { %>
-
-                <li><a href="/users/login" class="account-menu-item">Hola <%= locals.userLogged.names %> </a></li>
-                <li><a href="/users/logout" class="account-menu-item">Logout</a></li>
-                <li><a href="/cart" class="account-menu-item">Carrito</a></li>
-
-                <% } %>
-                
-            </ul>
+                <ul id="account-menu" class="nav-list">
+                    <% if (!locals.userLogged) { %> 
+                        
+                        <li><a href="/users/login" class="account-menu-item">Ingresar</a></li>
+                        <li><a href="/users/register" class="account-menu-item">Crear Cuenta</a></li>
+                        <li><a href="/cart" class="account-menu-item">Carrito</a></li>
+                        
+                        
+                        <% } else { %>
+                            
+                            <li><a href="/users/login" class="account-menu-item">Hola <%= locals.userLogged.names %> </a></li>
+                            <li><a href="/users/logout" class="account-menu-item">Logout</a></li>
+                            <li><a href="/cart" class="account-menu-item">Carrito</a></li>
+                            
+                            <% } %>
+                            
+                        </ul>
+                        <form action="/action_page.php" id="search-form">
+                            <input id="search-bar" type="text" placeholder="Buscar.." name="search">
+                            <button type="submit"><i class="fas fa-search"></i></button>
+                        </form>
+            </div>
         </nav>
     </div>
     <nav id="nav-wide" class="account-menu">
