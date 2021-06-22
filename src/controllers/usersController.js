@@ -71,6 +71,7 @@ const usersController = {
         })
             console.log(newUser);
             console.log('********* CREATION SUCCESSFUL **************');
+            req.session.userLogged = user;
             return res.render('profile', { user: newUser });
           
           
