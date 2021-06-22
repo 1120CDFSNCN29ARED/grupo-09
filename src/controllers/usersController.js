@@ -88,7 +88,7 @@ const usersController = {
 
   },
 
-  login: (req, res) => {
+  login: async (req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
       return res.render('login', {
@@ -99,9 +99,14 @@ const usersController = {
 
     let enteredUser = req.body.user;
         let enteredPassword = req.body.password;
-        let user = users.find((user) => user.email == enteredUser);
-    
-    if (!user) {
+        //let user = users.find((user) => user.email == enteredUser);
+        let user = await db.User.findOne({
+          where: {
+            email: enteredUser
+          }
+        })
+        
+        if (!user) {
       return res.render('login', {
         errors: {
           user: {
