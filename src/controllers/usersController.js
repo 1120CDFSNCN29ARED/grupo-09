@@ -10,7 +10,7 @@ const bcrypt = require('bcryptjs');
 
 const usersController = {
   index: (req, res) => {
-    db.Users.findAll()
+    db.User.findAll()
       .then(function(users){
         res.render('users', {users})
       })
@@ -38,7 +38,7 @@ const usersController = {
     }
 
     let email = req.body.email;
-    db.Users.findOne({
+    db.User.findOne({
       where: {
         email: email
       }
@@ -52,25 +52,40 @@ const usersController = {
           },
           oldData: req.body,
         })
-    }});
-
-    if (req.body.confirmPassword == req.body.password) {
-      let newUser = db.Users.create({
-        names: req.body.names,
-        email: req.body.email,
-        address: req.body.address,
-        password: bcrypt.hashSync(req.body.password, 10),
-        image: req.file.filename,
-      })
-      console.log(newUser);
-      console.log('********* CREATION SUCCESSFUL **************');
-      return res.render('profile', { user: newUser });
     } else {
-      return res.render('registration', {
-        errors: 'Las contraseñas no coinciden.',
-        oldData: req.body,
-      });
+
+      if (req.body.confirmPassword == req.body.password) {
+        let newUser = {
+          names: req.body.names,
+          email: req.body.email,
+          address: req.body.address,
+          password: req.body.password,
+          image: req.file.filename,
+        };
+        db.User.create({
+          names: newUser.names,
+          email: newUser.email,
+          address: newUser.address,
+          password: bcrypt.hashSync(newUser.password, 10),
+          image: newUser.image,
+        })
+            console.log(newUser);
+            console.log('********* CREATION SUCCESSFUL **************');
+            return res.render('profile', { user: newUser });
+          
+          
+        
+      } else {
+        return res.render('registration', {
+          errors: 'Las contraseñas no coinciden.',
+          oldData: req.body,
+        });
+      }
+
+
     }
+  });
+
   },
 
   login: (req, res) => {
@@ -126,7 +141,7 @@ const usersController = {
     });
   };
   if(req.body.confirmPassword == req.body.password) {
-    db.Users.update({
+    db.User.update({
       names: req.body.names,
       address: req.body.address,
       password: bcrypt.hashSync(req.body.password, 10),

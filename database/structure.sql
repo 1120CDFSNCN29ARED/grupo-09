@@ -8,7 +8,7 @@ Id int unsigned auto_increment,
 Names varchar(50) not null,
 Email varchar(50) not null,
 Address varchar(50) not null,
-Password varchar(50) not null,
+Password varchar(150) not null,
 Image varchar(100),
 primary key (Id)
 );
@@ -42,3 +42,5 @@ create table Sales (
     foreign key(Id_User) references Users(Id),
     foreign key(Id_SerialNumber) references Serial_Numbers(Id)
 );
+
+INSERT INTO AMapsDb.Users (Id, Names, Email, Address, Password, Image) VALUES(1, 'toto', 'toto2@mail.com', 'casa 1', '$2a$10$x8YhxmZIHCLzaP8MJ68EmOxxXf1PvgbV0PeCqGO95IVab9/JqbHl2', '16243214401610profile.jpeg');
