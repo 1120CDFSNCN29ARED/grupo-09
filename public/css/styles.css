@@ -34,27 +34,45 @@ header {
     min-width: 480px;
     width: 100vw;
 }
+#account-menu-outter-box {
+    display: flex;
+    flex-flow: row wrap;
+    background-color: var(--nw-beige);
+    justify-content: space-between;
+    align-content:space-around;
+}
 #search-form {
     display: flex;
     flex-flow: row wrap;
+    justify-content: flex-end;
+    align-content: center;
+    background-color: var(--nw-beige);
+    padding: 10px;
+}
+#search-form input {
+    margin-right: 0;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
 }
 #search-form button {
   float: right;
   padding: 6px 10px;
-  margin-top: 8px;
-  margin-right: 16px;
+  margin: 0;
   background: #ddd;
-  font-size: 17px;
+  font-size: 12px;
   border: none;
   cursor: pointer;
+  margin-left: 0;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+
 }
 #search-bar {
   float: right;
   padding: 6px;
   border: none;
-  margin-top: 8px;
-  margin-right: 16px;
-  font-size: 17px;
+  margin: 0;
+  font-size: 12px;
 }
 .content-wrapper {
     text-align: -webkit-center;
@@ -106,6 +124,9 @@ header {
 }
 #account-menu {
     font-weight: bold;
+    margin-top: 0;
+    justify-content: flex-start;
+    height: 100%;
 }
 .account-menu-item:active {
     text-decoration-line: underline;
@@ -397,7 +418,7 @@ padding-bottom: 5px;
     }
     .account-menu-list li {
         margin: 10px 0;
-        display: block;
+        display: inline-block;
         width: 100%;
     }
     .account-menu-list i {
@@ -462,8 +483,8 @@ padding-bottom: 5px;
         flex-direction: row;
         align-self: center;
         padding: 0 0 0 0;
-        width: 100%;
-        height: 20px;
+        margin: 0;
+        height: 100%;
         justify-content: center;
         background-color: var(--nw-beige);
     }
