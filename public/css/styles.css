@@ -462,7 +462,7 @@ padding-bottom: 5px;
         flex-direction: column;
     }
     #categories-menu {
-        display: flex;
+        display: none;
         flex-direction: row;
         justify-content: space-evenly;
         padding: 10px;

@@ -22,6 +22,9 @@ router.get('/', productsController.index);
 router.get('/create', productsController.createForm);
 router.post('/create', uploadFile.single('image'), productsController.createNewProduct);
 
+// Realizar búsqueda
+router.get('/search', productsController.searchProduct);
+
 //Formulario de edición de producto
 router.get('/edit/:id', productsController.edit);
 
@@ -33,5 +36,7 @@ router.patch('/:id', uploadFile.single('image'), productsController.update);
 
 // Detalle de un producto
 router.get('/:id', productsController.showProduct);
+
+
 
 module.exports = router;

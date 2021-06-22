@@ -1,10 +1,9 @@
-const fs = require('fs');
+const { name } = require('ejs');
 const path = require('path');
 
 const db = require('../../database/models');
-
-const productsFilePath = path.resolve(__dirname, '../../Products.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const Sequelize = require('sequelize');
+const Op = Sequelize.Op;
 
 const formatter = new Intl.NumberFormat('es-AR', {
   style: 'currency',
@@ -75,6 +74,28 @@ const productsController = {
     console.log('********* DELETION SUCCESSFUL **************');
     res.redirect('/');
   },
-};
+
+  searchProduct: (req, res) => {
+    let urlParams = new URLSearchParams(location.search);
+    let searchQuery = urlParams.get('search');
+    console.log(searchQuery)
+    db.Product.findAll({
+      where: {
+        name: { [Op.like]: '%' + searchQuery + '%' }      
+      }
+    }).then(function(results) {
+      if (results) {
+        res.render('/', {products: results})
+      } else {
+        res.redirect('noResults');
+      }
+    })
+  },
+
+  noResults: (req, res) => {
+    res.render('noResults');
+  }
+  
+}  
 
 module.exports = productsController;
