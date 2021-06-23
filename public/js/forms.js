@@ -1,44 +1,47 @@
 window.addEventListener("load", function(){
+    
     let RegistrationForm = document.querySelector(".registration-form");
     let ulerrores = document.querySelector("#errores-front-validation");
-    let button = document.querySelector("#create-account-button");
+    let campoNombre = document.querySelector("#names");
+    let campoEmail = document.querySelector("#email");
+    let campoDireccion = document.querySelector("#address");
+    let campoConstrasenia = document.querySelector("#password");
     let errores = [];
-    let ulContent = ulerrores.innerHTML;
-
-    RegistrationForm.addEventListener("submit", function(e){
-
-        let campoNombre = document.querySelector("#names");
-        if (!campoNombre.value){
-            errores.push("El campo de nombres debe completarse");
+    let erroresCheck = function(msg) {
+        errores.indexOf(msg) == -1 ? errores.push(msg) : '';
+    }
+     RegistrationForm.addEventListener("submit", function(e){
+        console.log("ERR!!!", errores)
+         errores = [];
+        if (campoNombre.value == ""){
+            erroresCheck("El campo de nombres debe completarse");
         }else if(campoNombre.value.length < 2){
-            errores.push("El campo debe tener al menos 2 caracteres");
+            erroresCheck("El campo de nombres debe tener al menos 2 caracteres");
         };
-
-        let campoEmail = document.querySelector("#email");
         if (campoEmail.value == ""){
-            errores.push("El campo de email debe estar completo");
-        } else if (/^\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{2,3,4})+$/.test(campoEmail.value) == false) {
-            errores.push("El campo de email no es válido");
+            erroresCheck("Debe ingresar un e-mail");
+        } else if (!(/^\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{2,3,4})+$/.test(campoEmail.value))) {
+            erroresCheck("El e-mail no es válido");
         };
 
-        let campoDireccion = document.querySelector("#address");
         if (campoDireccion.value == ""){
-            errores.push("El campo de dirección debe estar completo"); 
+            erroresCheck("Debe ingresar una dirección");
         }
-        let campoConstrasenia = document.querySelector("#password");
-        if (campoConstrasenia.value = ""){
-            errores.push("El campo de constrasenia es obligatorio");
-        }else if (campoConstrasenia.value.lenght < 8) {
-            errores.push("La contrasenia debe tener al menos 8 caracteres")
+
+        if (campoConstrasenia.value == ""){
+            erroresCheck("El campo de constraseña es obligatorio");
+        }else if (campoConstrasenia.value.length < 8) {
+            erroresCheck("La contraseña debe tener al menos 8 caracteres");
         }
-        ulerrores.innerHTML = "";
+
         if (errores.length > 0){
             e.preventDefault();
-            for(let i = 0; i < errores.length; i ++){
-                ulerrores.innerHTML += "<li>" + errores[i] + "</li>";
-            }
-
-        }
+            errores.map( unError => ulerrores.innerHTML += '<li>' + unError + '</li>');
+        } 
         
-    });
+        
+    }
+    
+    );
+    
 });

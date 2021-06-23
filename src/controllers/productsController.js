@@ -76,9 +76,6 @@ const productsController = {
   },
 
   searchProduct: (req, res) => {
-    // let urlParams = new URLSearchParams(location.search);
-    // let searchQuery = urlParams.get('search');
-    // console.log(searchQuery)
     let searchQuery = req.query.search;
     console.log(searchQuery)
     db.Product.findAll({
@@ -88,17 +85,17 @@ const productsController = {
     }).then(function(results) {
       console.log(results)
       if (results) {
-        res.render('products', {products: results})
+        res.render('products', {products: results});
       } else {
-        res.redirect('noResults');
+        res.render('noResults');
       }
     })
   },
-
+/*
   noResults: (req, res) => {
     res.render('noResults');
   }
-  
+  */
 }  
 
 module.exports = productsController;
