@@ -76,16 +76,19 @@ const productsController = {
   },
 
   searchProduct: (req, res) => {
-    let urlParams = new URLSearchParams(location.search);
-    let searchQuery = urlParams.get('search');
+    // let urlParams = new URLSearchParams(location.search);
+    // let searchQuery = urlParams.get('search');
+    // console.log(searchQuery)
+    let searchQuery = req.query.search;
     console.log(searchQuery)
     db.Product.findAll({
       where: {
         name: { [Op.like]: '%' + searchQuery + '%' }      
       }
     }).then(function(results) {
+      console.log(results)
       if (results) {
-        res.render('/', {products: results})
+        res.render('/products', {products: results})
       } else {
         res.redirect('noResults');
       }
