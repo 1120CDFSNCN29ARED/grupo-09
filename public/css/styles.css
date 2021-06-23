@@ -494,3 +494,6 @@ padding-bottom: 5px;
     }
 
 }
+div.errores {
+    color: red;
+}
