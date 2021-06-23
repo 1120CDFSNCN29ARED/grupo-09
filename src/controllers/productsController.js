@@ -88,7 +88,7 @@ const productsController = {
     }).then(function(results) {
       console.log(results)
       if (results) {
-        res.render('/products', {products: results})
+        res.render('products', {products: results})
       } else {
         res.redirect('noResults');
       }
