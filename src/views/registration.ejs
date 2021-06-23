@@ -3,6 +3,7 @@
 
 <head>
     <%- include('./partials/head') %>
+    <script src="/js/forms.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -16,7 +17,7 @@
             <div id="registration-form-box">
 
             <div class="errores"> 
-                <ul>
+                <ul id="errores-front-validation">
                     
                 </ul>
             </div>
@@ -93,7 +94,7 @@
                                     <div class="error-text">
                                     </div>
                                     <div class="registration-box">
-                                        <button type="submit" id="create-account-button">Crear cuenta</button>
+                                        <button type="submit" id="create-account-button" >Crear cuenta</button>
                                     </div>
                                 </form>
 
