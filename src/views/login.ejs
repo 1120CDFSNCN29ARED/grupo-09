@@ -3,6 +3,7 @@
 
 <head>
   <%- include('./partials/head') %>
+    <script src="/js/loginForm.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -11,32 +12,40 @@
   </header>
   <main id="login-main">
     <div id="login-form-box">
-      <form action="/users/login" method="POST" class="login-form">
 
-        <div class="login-box">
-          <label class="login-input login-box-label" for="user">E-Mail:</label>
-          <input type="email" name="user" id="user" class="login-input" value="<%= locals.oldData? oldData.user:null%>">
-          <% if (locals.errors && errors.user){%>
-            <p>
-              <%= errors.user.msg %>
-            </p>
-            <% } %>
-        </div>
-        <div class="login-box">
-          <label for="password" class="login-input login-box-label">Contraseña:</label>
-          <input type="password" name="password" id="password" class="login-input">
-          <% if (locals.errors && errors.password){%>
-            <p>
-              <%= errors.password.msg %>
-            </p>
-            <% } %>
+
+        <div class="errores">
+          <ul id="err-front-validation-login">
+          </ul>
         </div>
 
-        <div class="login-box">
-          <button type="submit" class="login-button">Ingresar</button>
-        </div>
-      </form>
-    </div>
+        <form action="/users/login" method="POST" class="login-form" id='log-form'>
+
+          <div class="login-box">
+            <label class="login-input login-box-label" for="user">E-Mail:</label>
+            <input type="email" name="user" id="user" class="login-input"
+              value="<%= locals.oldData? oldData.user:null%>">
+            <% if (locals.errors && errors.user){%>
+              <p>
+                <%= errors.user.msg %>
+              </p>
+              <% } %>
+          </div>
+          <div class="login-box">
+            <label for="password" class="login-input login-box-label">Contraseña:</label>
+            <input type="password" name="password" id="password" class="login-input">
+            <% if (locals.errors && errors.password){%>
+              <p>
+                <%= errors.password.msg %>
+              </p>
+              <% } %>
+          </div>
+
+          <div class="login-box">
+            <button type="submit" class="login-button">Ingresar</button>
+          </div>
+        </form>
+      </div>
 
   </main>
   <footer class="footer footer-fixed">
