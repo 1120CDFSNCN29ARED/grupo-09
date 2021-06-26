@@ -7,9 +7,13 @@ const methodOverride = require('method-override');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
 const userLoggedMiddleware = require("./Middlewares/userLoggedMiddleware");
+
 const routesIndex = require("./routes/index");
 const routesUsers = require("./routes/users");
 const routesProducts = require("./routes/products");
+
+const apiProductsRouter = require('./routes/api/productsApiRoutes');
+const apiUsersRouter = require('./routes/api/usersApiRoutes');
 
 app.use(cors());
 
@@ -35,6 +39,9 @@ app.set("views", path.resolve(__dirname, "views"));
 app.use("/", routesIndex);
 app.use("/users", routesUsers);
 app.use("/products", routesProducts);
+
+app.use('/api/products', apiProductsRouter);
+app.use('/api/users', apiUsersRouter);
 
 app.listen(3002, () => {
     console.log('Server is live. Port 3002.');
