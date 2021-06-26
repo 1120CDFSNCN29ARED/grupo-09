@@ -4,6 +4,7 @@ const multer = require('multer');
 const path = require ('path');
 
 const productsController = require('../controllers/productsController');
+const productValidation = require('../Middlewares/productValidation');
 
 const storage = multer.diskStorage({
     destination: function(req, file, cb){
@@ -20,7 +21,7 @@ router.get('/', productsController.index);
 
 // Crear productos
 router.get('/create', productsController.createForm);
-router.post('/create', uploadFile.single('image'), productsController.createNewProduct);
+router.post('/create', uploadFile.single('image'), productValidation, productsController.createNewProduct);
 
 // Realizar búsqueda
 router.get('/search', productsController.searchProduct);
@@ -32,7 +33,7 @@ router.get('/edit/:id', productsController.edit);
 router.post('/:id', productsController.deleteProduct);
 
 // Editar un producto
-router.patch('/:id', uploadFile.single('image'), productsController.update);
+router.patch('/:id', uploadFile.single('image'), productValidation, productsController.update);
 
 // Detalle de un producto
 router.get('/:id', productsController.showProduct);

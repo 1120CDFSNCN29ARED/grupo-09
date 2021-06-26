@@ -7,41 +7,37 @@ window.addEventListener("load", function () {
     let address = document.querySelector("#address");
     let password = document.querySelector("#password");
     let err = [];
-    let errorCheck = function (msg) {
-        err.indexOf(msg) == -1 ? err.push(msg) : '';
-    }
 
     RegistrationForm.addEventListener("submit", function (e) {
 
         if (names.value == "") {
-            errorCheck("El campo de nombres debe completarse");
+            err.push("El campo de nombres debe completarse");
         } else if (names.value.length < 2) {
-            errorCheck("El campo de nombres debe tener al menos 2 caracteres");
+            err.push("El campo de nombres debe tener al menos 2 caracteres");
         };
         
         if (email.value == "") {
-            errorCheck("Debe ingresar un e-mail");
+            err.push("Debe ingresar un e-mail");
         } else if (!(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/).test(email.value)) {
-            errorCheck("El e-mail no es válido");
+            err.push("El e-mail no es válido");
         };
         
         if (address.value == "") {
-            errorCheck("Debe ingresar una dirección");
+            err.push("Debe ingresar una dirección");
         };
         
         if (password.value == "") {
-            errorCheck("El campo de constraseña es obligatorio");
+            err.push("El campo de constraseña es obligatorio");
         } else if (password.value.length < 8) {
-            errorCheck("La contraseña debe tener al menos 8 caracteres");
-        };
-        
+            err.push("La contraseña debe tener al menos 8 caracteres");
+        };       
         
         if (err.length > 0) {
             e.preventDefault();
             ul.innerHTML = '';
-            err.forEach(unError => ul.innerHTML += '<li>' + unError + '</li>');
+            err.forEach(oneError => ul.innerHTML += '<li>' + oneError + '</li>');
+            err = [];
         };
-        err = [];
 
     });
 });
