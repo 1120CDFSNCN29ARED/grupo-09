@@ -20,7 +20,7 @@ window.addEventListener("load", function(){
         };
         if (campoEmail.value == ""){
             erroresCheck("Debe ingresar un e-mail");
-        } else if (!(/^\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{2,3,4})+$/.test(campoEmail.value))) {
+        } else if (!(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/).test(campoEmail.value)) {
             erroresCheck("El e-mail no es válido");
         };
 
@@ -36,7 +36,7 @@ window.addEventListener("load", function(){
 
         if (errores.length > 0){
             e.preventDefault();
-            errores.map( unError => ulerrores.innerHTML += '<li>' + unError + '</li>');
+            errores.forEach( unError => ulerrores.innerHTML += '<li>' + unError + '</li>');
         } 
         
         
