@@ -1,0 +1,36 @@
+:root {
+    --nw-white: rgb(245, 246, 243);
+    --nw-blue: rgb(152, 195, 198);
+    --nw-orange: rgb(237, 75, 65);
+    --nw-beige: rgb(204, 144, 106);
+    --nw-grey: rgb(41, 41, 37);
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.tiny {
+  background-color: var(--nw-beige);
+  border-radius: 8px;
+  font-size: 14px;
+  display: inline-block;
+  width: 90px;
+  height: 65px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.tiny-title, .tiny-text {
+  padding: 5px;
+  text-align: center;
+
+}
+.tiny-text {
+  font-size: 20px;
+}
+.tiny-title {
+    background-color: var(--nw-orange);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}

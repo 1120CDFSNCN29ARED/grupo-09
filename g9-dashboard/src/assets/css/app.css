@@ -27,7 +27,15 @@
   max-height: 100px;
   padding-left: 30px;
 }
-
+#topper {
+  display: flex;
+  flex-flow: row wrap;
+  background-color: var(--nw-grey);
+  width: 100%;
+  justify-content: space-around;
+  align-content: center;
+  padding: 20px;
+}
 #footer {
   background-color: var(--nw-grey);
   width: 100%;
@@ -44,4 +52,10 @@
   padding-right: 30px;
   padding-bottom: 15px;
   padding-top: 10px;
+}
+.totals {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  align-items: center;
 }
