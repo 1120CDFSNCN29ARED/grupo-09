@@ -1,0 +1,47 @@
+:root {
+    --nw-white: rgb(245, 246, 243);
+    --nw-blue: rgb(152, 195, 198);
+    --nw-orange: rgb(237, 75, 65);
+    --nw-beige: rgb(204, 144, 106);
+    --nw-grey: rgb(41, 41, 37);
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+#the-box {
+  background-color: var(--nw-orange);
+}
+#logo {
+  background-color: var(--nw-grey);
+  height: 100px;
+  color: var(--nw-white);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+#logo-img {
+  image-resolution: 50%;
+  max-height: 100px;
+  padding-left: 30px;
+}
+
+#footer {
+  background-color: var(--nw-grey);
+  width: 100%;
+  padding-top: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+}
+#copyright-text {
+  color: var(--nw-beige);
+  font-size: 12px;
+  text-align: right;
+  padding-right: 30px;
+  padding-bottom: 15px;
+  padding-top: 10px;
+}
