@@ -7,8 +7,9 @@ export default class Content extends Component {
   constructor() {
     super();
     this.state = {
-      usersData: [],
+      latestData: [],
       productsData: [],
+      usersData: [],
     };
   }
   async componentDidMount() {
@@ -18,12 +19,36 @@ export default class Content extends Component {
     const resUsersJson = await resUsers.json();
     const resUsersData = resUsersJson.data;
     const resProductsData = resProductsJson.data;
-
-    this.setState({
-      usersData: resUsersData,
-      productsData: resProductsData,
-    });
     let latest = [];
+    this.setState({
+      latestData: [],
+      productsData: resProductsData,
+      usersData: resUsersData,
+    });
+  
+    let newestUser = this.state.usersData.reduce(function (prev, current) {
+      if (+current.id > +prev.id) {
+        return current;
+      } else {
+        return prev;
+      }
+    });
+    latest.push(newestUser);
+    let latestProduct = this.state.productsData.reduce(function (prev, current) {
+      if (+current.id > +prev.id) {
+        return current;
+      } else {
+        return prev;
+      }
+    });
+    latest.push(latestProduct);
+    console.log(latest);
+    this.setState({
+      latestData: latest,
+      productsData: resProductsData,
+      usersData: resUsersData,
+    });
+    
   }
   
   render() {
@@ -33,11 +58,11 @@ export default class Content extends Component {
       <div className='content'>
         <div className='latest'>
 
-{  /*        {this.latest.length > 0 ? (
-            this.latest.map((oneLatest, i) => {
+         {this.state.latestData.length > 0 ? (
+            this.state.latestData.map((oneLatest, i) => {
               return <SmallCard {...oneLatest} key={i} />
             })
-          ) : ((<p>No info</p>))}*/}
+          ) : ((<p>No info</p>))}
 
         </div>
 
