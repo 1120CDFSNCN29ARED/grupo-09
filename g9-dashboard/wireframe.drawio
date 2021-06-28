@@ -88,10 +88,10 @@
                 <mxCell id="36" value="MediumCard.jsx&lt;br&gt;(1 product)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=17;" vertex="1" parent="1">
                     <mxGeometry x="365" y="456.25" width="120" height="52.5" as="geometry"/>
                 </mxCell>
-                <mxCell id="37" value="Medium&amp;nbsp;&lt;br&gt;Card.jsx" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=17;" vertex="1" parent="1">
+                <mxCell id="37" value="Small&amp;nbsp;&lt;br&gt;Card.jsx" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=17;" vertex="1" parent="1">
                     <mxGeometry x="130" y="268.75" width="120" height="52.5" as="geometry"/>
                 </mxCell>
-                <mxCell id="38" value="Medium&amp;nbsp;&lt;br&gt;Card.jsx" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=17;" vertex="1" parent="1">
+                <mxCell id="38" value="Small&amp;nbsp;&lt;br&gt;Card.jsx" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=17;" vertex="1" parent="1">
                     <mxGeometry x="130" y="393.75" width="120" height="52.5" as="geometry"/>
                 </mxCell>
                 <mxCell id="39" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#303030;fillColor=#FFCC99;" vertex="1" parent="1">
