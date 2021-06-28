@@ -10,6 +10,7 @@ const productsApiController = {
       .then(products => {
         products.forEach(product => {
           product.dataValues.detailUrl = 'http://localhost:3002/api/products/' + product.id;
+          product.dataValues.image =  imgPath + product.image;
         });
         let response = {
           status: 200,
