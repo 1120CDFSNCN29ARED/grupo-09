@@ -1,7 +1,7 @@
 const db = require('../../../database/models');
 const path = require('path');
 
-const imgPath = path.resolve(__dirname, '../../public/img/users/');
+const imgPath = path.join(__dirname, '../../public/img/users/');
 
 const usersApiController = {
 
@@ -37,6 +37,10 @@ const usersApiController = {
         }
         res.json(response);
       });
+  },
+
+  'image': (req, res) => {
+
   },
 
 };

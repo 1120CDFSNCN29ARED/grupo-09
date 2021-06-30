@@ -1,8 +1,8 @@
 import React from 'react';
-import Topper from './Topper/Topper';
-import Content from './Content/Content';
-import Footer from './Footer/Footer';
-import '../../assets/css/app.css';
+import Topper from './Topper';
+import Content from './Content';
+import Footer from './Footer';
+import '../assets/css/app.css';
 
 function Wrapper () {
     return (
