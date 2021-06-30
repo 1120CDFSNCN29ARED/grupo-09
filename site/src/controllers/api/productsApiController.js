@@ -1,7 +1,7 @@
 const db = require('../../../database/models');
 const path = require('path');
 
-const imgPath = path.join('/public/img/maps/');
+const imgPath = path.resolve(__dirname, '/public/img/maps/');
 
 const productsApiController = {
 
@@ -10,7 +10,7 @@ const productsApiController = {
       .then(products => {
         products.forEach(product => {
           product.dataValues.detailUrl = 'http://localhost:3002/api/products/' + product.id;
-          product.dataValues.image = 'http://localhost:3002' + imgPath + product.image;
+          product.dataValues.image = 'http://localhost:3002' + imgPath +'/'+ product.image;
         });
         let response = {
           status: 200,
@@ -31,7 +31,7 @@ const productsApiController = {
             id: product.id,
             name: product.name,
             description: product.description,
-            image: imgPath + product.dataValues.image,
+            image: imgPath + '/'+ product.dataValues.image,
             price: product.price,
           },
         }
