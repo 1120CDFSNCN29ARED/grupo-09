@@ -1,0 +1,21 @@
+:root {
+    --nw-white: rgb(245, 246, 243);
+    --nw-blue: rgb(152, 195, 198);
+    --nw-orange: rgb(237, 75, 65);
+    --nw-beige: rgb(204, 144, 106);
+    --nw-grey: rgb(41, 41, 37);
+}
+button {
+  border: none;
+}
+.create-button {
+  width: 80%;
+  height: 30px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  size: 20px;
+  background-color: var(--nw-grey);
+  color: gray;
+  border: gray 1px solid;
+  width: 170px;
+}

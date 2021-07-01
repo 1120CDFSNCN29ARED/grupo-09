@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './Content.css';
 import SmallCard from './SmallCard';
 import MediumCard from './MediumCard';
+import Button from './Button';
 
 export default class Content extends Component {
   constructor() {
@@ -10,6 +11,7 @@ export default class Content extends Component {
       latestData: [],
       productsData: [],
       usersData: [],
+      buttons: [],
     };
   }
   async componentDidMount() {
@@ -20,7 +22,8 @@ export default class Content extends Component {
     const resUsersJson = await resUsers.json();
     const resUsersData = resUsersJson.data;
     let latest = [];
-   
+    const buttons = ['All Users', 'All Products', 'Create Product'];
+
     let newestUser = resUsersData.reduce(function (prev, current) {
       if (+current.id > +prev.id) {
         return current;
@@ -43,11 +46,11 @@ export default class Content extends Component {
       latestData: latest,
       productsData: resProductsData,
       usersData: resUsersData,
+      buttons: buttons,
     });
   }
 
   render() {
-
 
     return (
       <div className='content'>
@@ -57,6 +60,12 @@ export default class Content extends Component {
               return <SmallCard {...oneLatest} key={i} />
             })
           ) : ((<p>No info</p>))}
+
+          {this.state.buttons.length > 0 ? (
+            this.state.buttons.map((oneButton, i) => {
+              return <Button>{oneButton}</Button>
+            })
+          ) : ('')}
         </div>
 
         <div className='all-products'>
@@ -68,8 +77,8 @@ export default class Content extends Component {
           ) : ((<p>No info</p>))}
         </div>
 
-        {/* create product button */}
       </div>
     )
+
   }
 };

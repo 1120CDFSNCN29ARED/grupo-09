@@ -21,16 +21,16 @@
   display: inline-block;
   align-self: flex-start;
   padding-top: 10px;
+  text-align: center;
 }
 .all-products-title {
   display: block;
   width: 100%;
   background-color: var(--nw-orange);
   margin-top: 10px;
-  padding: 5px;
+  padding: 6px;
   padding-left: 20px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-radius: 8px;
 }
 .all-products {
   max-width: 80%;

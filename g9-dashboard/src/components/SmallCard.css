@@ -13,7 +13,7 @@
 .small-card {
   text-align: center;
   width: 170px;
-  border:rgb(237, 75, 65) 1px solid;
+  border:gray 1px solid;
   border-radius: 11px;
   margin: 10px;
 }
@@ -23,7 +23,7 @@
 }
 .small-card-title {
   size: 20px;
-  background-color: var(--nw-orange);
+  background-color: gray;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   padding: 5px;

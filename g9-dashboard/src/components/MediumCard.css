@@ -12,7 +12,7 @@
 }
 
 .med-card {
-  background-color: gray;
+  background-color: var(--nw-grey);
   font-size: 14px;
   margin: 15px;
   min-width: 22%;
