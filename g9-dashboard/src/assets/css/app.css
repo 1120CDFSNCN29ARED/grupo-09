@@ -35,23 +35,26 @@
   justify-content: space-around;
   align-content: center;
   padding: 20px;
+  border-bottom: gray 1px solid;
 }
 #footer {
   background-color: var(--nw-grey);
   width: 100%;
-  padding-top: 10px;
-  position: absolute;
+  position: fixed;
+  margin-bottom: 0;
   bottom: 0;
   left: 0;
   text-align: center;
+  border-top:gray 1px solid;
+  height: 25px;
 }
 #copyright-text {
-  color: var(--nw-beige);
+  color: gray;
   font-size: 12px;
   text-align: right;
   padding-right: 30px;
-  padding-bottom: 15px;
-  padding-top: 10px;
+  padding-bottom: 5px;
+  padding-top: 5px;
 }
 .totals {
   display: flex;

@@ -1,0 +1,40 @@
+:root {
+    --nw-white: rgb(245, 246, 243);
+    --nw-blue: rgb(152, 195, 198);
+    --nw-orange: rgb(237, 75, 65);
+    --nw-beige: rgb(204, 144, 106);
+    --nw-grey: rgb(41, 41, 37);
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.med-card {
+  background-color: gray;
+  font-size: 14px;
+  margin: 15px;
+  min-width: 22%;
+  max-width: 22%;
+  text-align: center;
+  border: gray 1px solid;
+}
+.med-card-title, .med-card-text {
+  padding: 5px;
+  background-color: rgb(41, 41, 37);
+}
+.med-card-title {
+  color: var(--nw-white);
+  font-size: 12px;
+  padding: 7px 7px 0 7px;
+}
+.med-card-text {
+  color: var(--nw-beige);
+  font-size: 12px;
+}
+.med-card-img {
+  max-width: 150px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}

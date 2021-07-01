@@ -1,7 +1,8 @@
 const db = require('../../../database/models');
 const path = require('path');
 
-const imgPath = path.join(__dirname, '../../public/img/users/');
+//const imgPath = path.join(__dirname, '../../public/img/users/');
+const imgPath = path.resolve(__dirname, '/img/users/');
 
 const usersApiController = {
 
@@ -10,7 +11,7 @@ const usersApiController = {
       .then(users => {
         users.forEach(user => {
           user.dataValues.profileUrl = 'http://localhost:3002/api/users/' + user.id;
-          user.dataValues.image = imgPath + user.image;
+          user.dataValues.image = 'http://localhost:3002' +imgPath + '/' + user.image;
         });
 
         let response = {

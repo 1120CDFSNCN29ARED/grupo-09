@@ -1,7 +1,7 @@
 const db = require('../../../database/models');
 const path = require('path');
 
-const imgPath = path.resolve(__dirname, '/public/img/maps/');
+const imgPath = path.resolve(__dirname, '/img/maps/');
 
 const productsApiController = {
 

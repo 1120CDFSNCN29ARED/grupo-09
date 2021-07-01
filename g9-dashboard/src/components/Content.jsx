@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Content.css';
 import SmallCard from './SmallCard';
 import MediumCard from './MediumCard';
 
@@ -51,7 +52,6 @@ export default class Content extends Component {
     return (
       <div className='content'>
         <div className='latest'>
-
           {this.state.latestData.length > 0 ? (
             this.state.latestData.map((oneLatest, i) => {
               return <SmallCard {...oneLatest} key={i} />
@@ -60,6 +60,7 @@ export default class Content extends Component {
         </div>
 
         <div className='all-products'>
+          <p className='all-products-title'>All Products</p>
           {this.state.productsData.length > 0 ? (
             this.state.productsData.map((oneProduct, i) => {
               return <MediumCard {...oneProduct} key={i} />

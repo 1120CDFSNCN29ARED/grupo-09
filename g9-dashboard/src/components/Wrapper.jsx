@@ -6,7 +6,7 @@ import '../assets/css/app.css';
 
 function Wrapper () {
     return (
-      <div id='wrapper-wrapper'>
+      <div className='wrapper-wrapper'>
         <Topper />
         <Content />
         <Footer />

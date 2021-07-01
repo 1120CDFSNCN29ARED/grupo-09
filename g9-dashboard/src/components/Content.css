@@ -1,0 +1,40 @@
+:root {
+    --nw-white: rgb(245, 246, 243);
+    --nw-blue: rgb(152, 195, 198);
+    --nw-orange: rgb(237, 75, 65);
+    --nw-beige: rgb(204, 144, 106);
+    --nw-grey: rgb(41, 41, 37);
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.content {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  margin-bottom: 25px;
+}
+.latest {
+  max-width: 15%;
+  display: inline-block;
+  align-self: flex-start;
+  padding-top: 10px;
+}
+.all-products-title {
+  display: block;
+  width: 100%;
+  background-color: var(--nw-orange);
+  margin-top: 10px;
+  padding: 5px;
+  padding-left: 20px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.all-products {
+  max-width: 80%;
+  display: flex;
+  flex-flow: row wrap;
+  padding-top: 10px;
+}

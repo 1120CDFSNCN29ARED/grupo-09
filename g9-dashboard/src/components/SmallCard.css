@@ -1,0 +1,36 @@
+:root {
+    --nw-white: rgb(245, 246, 243);
+    --nw-blue: rgb(152, 195, 198);
+    --nw-orange: rgb(237, 75, 65);
+    --nw-beige: rgb(204, 144, 106);
+    --nw-grey: rgb(41, 41, 37);
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.small-card {
+  text-align: center;
+  width: 170px;
+  border:rgb(237, 75, 65) 1px solid;
+  border-radius: 11px;
+  margin: 10px;
+}
+.small-card-img {
+  max-height: 70px;
+  margin: 15px;
+}
+.small-card-title {
+  size: 20px;
+  background-color: var(--nw-orange);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  padding: 5px;
+}
+.small-card-text {
+  font-size: 14px;
+  color: var(--nw-white);
+  font-style: normal;
+  padding: 0 10px 15px 10px;
+}

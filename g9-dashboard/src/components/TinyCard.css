@@ -33,4 +33,5 @@
     background-color: var(--nw-orange);
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
+    border-bottom: rgb(41, 41, 37) 1px solid;
 }

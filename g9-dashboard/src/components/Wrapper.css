@@ -1,0 +1,15 @@
+:root {
+    --nw-white: rgb(245, 246, 243);
+    --nw-blue: rgb(152, 195, 198);
+    --nw-orange: rgb(237, 75, 65);
+    --nw-beige: rgb(204, 144, 106);
+    --nw-grey: rgb(41, 41, 37);
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.wrapper-wrapper {
+  height: 100%;
+}
