@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './Content.css';
-import SmallCard from './SmallCard';
-import MediumCard from './MediumCard';
-import Button from './Button';
+import SmallCard from '../../components/SmallCard/SmallCard';
+import MediumCard from '../../components/MediumCard/MediumCard';
+import Button from '../../components/Button/Button';
 
 export default class Content extends Component {
   constructor() {

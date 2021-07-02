@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import TinyCard from './TinyCard';
-import logo from '../assets/img/logo_grey_cropped.png';
+import TinyCard from '../../components/TinyCard';
+import logo from '../../assets/img/logo_grey_cropped.png';
+import './Topper.css';
 
 export default class Topper extends Component {
   constructor() {
@@ -22,9 +23,9 @@ export default class Topper extends Component {
 
   render() {
     return (
-      <div id='topper'>
-        <div id='logo'>
-          <img src={logo} alt='logo' id='logo-img' />
+      <div className='topper'>
+        <div className='logo'>
+          <img src={logo} alt='logo' className='logo-img' />
         </div>
         <div className='totals'>
           {this.state.totals.length > 0 ? (

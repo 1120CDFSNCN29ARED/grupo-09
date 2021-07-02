@@ -1,0 +1,26 @@
+:root {
+    --nw-white: rgb(245, 246, 243);
+    --nw-blue: rgb(152, 195, 198);
+    --nw-orange: rgb(237, 75, 65);
+    --nw-beige: rgb(204, 144, 106);
+    --nw-grey: rgb(41, 41, 37);
+}
+#footer {
+  background-color: var(--nw-grey);
+  position: fixed;
+  margin-bottom: 0;
+  bottom: 0;
+  right:0;
+  text-align: center;
+  border-top:gray 1px solid;
+  height: 25px;
+}
+#copyright-text {
+  color: gray;
+  font-size: 12px;
+  text-align: right;
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
